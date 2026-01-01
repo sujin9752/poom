@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="page" id="page">
+    <!-- 상단바 -->
+    <header class="topbar">
+      <button class="icon-btn" type="button" aria-label="뒤로가기" id="btnBack">
+        <span class="ico-arrow" aria-hidden="true"></span>
+      </button>
+
+      <h1 class="topbar-title">카테고리</h1>
+
+      <button class="skip-btn" type="button" id="btnSkip">건너뛰기</button>
+    </header>
+
+    <!-- 카드 그리드 -->
+    <section class="content" aria-label="카테고리 선택">
+      <ul class="grid" id="categoryGrid">
+        <li>
+          <button class="card" type="button" data-value="가구/수납" aria-pressed="false">
+            <span class="thumb" aria-hidden="true">
+              <!-- 아이콘은 일단 텍스트/이모지 자리. 너는 SVG/이미지로 교체하면 됨 -->
+              <span class="emoji">🪑</span>
+            </span>
+            <span class="label">가구/수납</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="홈데코" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🛋️</span></span>
+            <span class="label">홈데코</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="패브릭/생활" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🧺</span></span>
+            <span class="label">패브릭/생활</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="키친/푸드" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🍳</span></span>
+            <span class="label">키친/푸드</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="디자인문구" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">✏️</span></span>
+            <span class="label">디자인문구</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="취미" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">📷</span></span>
+            <span class="label">취미</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="디지털" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🖥️</span></span>
+            <span class="label">디지털</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="가전" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🎧</span></span>
+            <span class="label">가전</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="패션" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">⌚</span></span>
+            <span class="label">패션</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="뷰티/헬스" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🧴</span></span>
+            <span class="label">뷰티/헬스</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="트래블/캠핑" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">⛺</span></span>
+            <span class="label">트래블/캠핑</span>
+          </button>
+        </li>
+
+        <li>
+          <button class="card" type="button" data-value="반려동물" aria-pressed="false">
+            <span class="thumb" aria-hidden="true"><span class="emoji">🐶</span></span>
+            <span class="label">반려동물</span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 하단 CTA -->
+    <footer class="cta">
+      <button class="cta-btn" type="button" id="btnStart" disabled>
+        탐색 시작하기
+      </button>
+    </footer>
+  </main>
+
+
+  <script src="js/onboarding.js"></script>
+</body>
+
+</html>

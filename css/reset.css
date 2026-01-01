@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'scDream', sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+html { font-size: 62.5%; }
+
+body {color: var(--black);}
+
+ol,ul{
+	list-style-type:none;
+}   
+
+a{
+	text-decoration:none;
+	color:inherit;
+}  
+
+h1,h2,h3,h4,h5,h6{
+	font-size: 100%;
+	margin-top: 0;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+em {
+  font-style: normal;
+}

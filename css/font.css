@@ -1,0 +1,79 @@
+@font-face{
+  font-family: 'scDream';
+  font-weight: 100;
+  src: url(font/SCDream1.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 200;
+  src: url(font/SCDream2.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 300;
+  src: url(font/SCDream3.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 400;
+  src: url(font/SCDream4.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 500;
+  src: url(font/SCDream5.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 600;
+  src: url(font/SCDream6.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 700;
+  src: url(font/SCDream7.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 800;
+  src: url(font/SCDream8.woff) format('woff');
+}
+@font-face{
+  font-family: 'scDream';
+  font-weight: 900;
+  src: url(font/SCDream9.woff) format('woff');
+}
+
+
+@font-face{
+  font-family: 'Jalnan';
+  font-weight: normal;
+  src: url(font/Jalnan.woff) format('woff');
+}
+@font-face{
+  font-family: 'JalnanGothic';
+  font-weight: normal;
+  src: url(font/JalnanGothic.woff) format('woff');
+}
+
+
+@font-face{
+  font-family: 'NanumSquare';
+  font-weight: 300;
+  src: url(font/NanumSquareL.woff) format('woff');
+}
+@font-face{
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  src: url(font/NanumSquareR.woff) format('woff');
+}
+@font-face{
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  src: url(font/NanumSquareB.woff) format('woff');
+}
+@font-face{
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  src: url(font/NanumSquareEB.woff) format('woff');
+}

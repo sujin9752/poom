@@ -1,0 +1,27 @@
+:root {
+  --main: #ED1C24;
+  --sub1: #FFD900;
+  --sub2: #FF861B;
+
+  --white: #fff;
+  --gray-100: #eeeeee;
+  --gray-200: #dadada;
+  --gray-300: #c0c0c0;
+  --gray-400: #a5a5a5;
+  --gray-500: #8a8a8a;
+  --gray-600: #707070;
+  --gray-700: #555555;
+  --gray-800: #3a3a3a;
+  --gray-900: #222;
+  --black: #111;
+
+  --fs-24: 2.4rem;
+  --fs-22: 2.2rem;
+  --fs-20: 2.0rem;
+  --fs-18: 1.8rem;
+  --fs-16: 1.6rem; 
+  --fs-14: 1.4rem; 
+
+
+  --radius-round: 9999px; 
+}

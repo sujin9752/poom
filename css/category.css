@@ -1,0 +1,148 @@
+.login-container {
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.skip-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.skip-btn:hover {
+  background-color: var(--gray-100);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 680px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.title {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.title h1 {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.title .highlight {
+  color: var(--main);
+}
+
+.illustration {
+  width: 100%;
+  max-width: 33rem;
+  margin: 10rem auto;
+}
+
+.illustration img {
+  width: auto;
+  height: 70%;
+}
+
+.login-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--main);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #d01820;
+}
+
+.btn-naver {
+  background-color: #03C75A;
+  color: var(--white);
+}
+
+.btn-naver:hover {
+  background-color: #02b351;
+}
+
+.btn-kakao {
+  background-color: #FEE500;
+  color: #000000;
+}
+
+.btn-kakao:hover {
+  background-color: #f5dc00;
+}
+
+.btn-apple {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-apple:hover {
+  background-color: var(--gray-900);
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  color: var(--gray-700);
+}
+
+.signup-link button {
+  color: var(--black);
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+}

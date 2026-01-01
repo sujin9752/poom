@@ -1,0 +1,111 @@
+.onboarding-bg {
+  background: var(--main);
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fd3738;
+  position: relative;
+}
+
+.onboarding-section.onboarding-head {
+  width: 100vw;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.onboarding-head-text {
+  color: var(--white);
+  text-align: center;
+}
+.desc-light {
+  font-size: 2rem;
+  margin-bottom: 2.7rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.desc-light .highlight {
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+}
+.desc-strong {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: var(--sub1);
+  line-height: 1.14;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+.benefit {
+  display: block;
+  color: #fff;
+  font-size: 4.0rem;
+  margin-top: 0.7rem;
+}
+.desc-coupon {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.coupon-badge {
+  background: #ffe900;
+  color: #fd3738;
+  font-weight: 700;
+  font-size: 2rem;
+  border-radius: 0.7rem;
+  padding: 0.2rem 1.1rem 0.2rem 1.1rem;
+  margin: 0 0.2rem;
+}
+.onboarding-coupon {
+  width: 95vw;
+  max-width: 34rem;
+  position: relative;
+}
+.coupon-main {
+  width: 100%;
+  margin-bottom: -4.5rem;
+  z-index: 2;
+  position: relative;
+}
+.coupon-bottom {
+  width: 80vw;
+  max-width: 28rem;
+  display: block;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+.onboarding-illust-logo {
+  margin-top: 4.2rem;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.onboarding-illust {
+  width: 64vw;
+  max-width: 32rem;
+  margin-bottom: 5.6rem;
+}
+.onboarding-logo {
+  width: 10.4rem;
+  display: block;
+  margin: 0 auto 3rem auto;
+}
+@media (max-width: 480px) {
+  .onboarding-head-text .desc-light {font-size: 1.6rem;}
+  .desc-strong {font-size: 3rem;}
+  .benefit {font-size: 2.9rem;}
+  .desc-coupon {font-size: 1.5rem;}
+  .coupon-badge {font-size: 1.2rem;}
+  .onboarding-coupon {max-width: 26rem;}
+  .coupon-main {max-width: 26rem;}
+  .coupon-bottom {max-width: 14rem;}
+  .onboarding-illust {max-width: 16rem;}
+  .onboarding-logo {width: 5rem;}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Poom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="login-container">
+    <header class="header">
+      <button class="skip-btn" onclick="handleSkip()">둘러보기</button>
+    </header>
+
+    <main class="content">
+      <div class="title">
+        <h1>
+          오늘,<br>
+          당신의 취향을<br>
+          <span class="highlight">품</span>-다.
+        </h1>
+      </div>
+
+      <div class="illustration">
+        <img src="img/intro/illust.png" alt="">
+      </div>
+
+      <div class="login-buttons">
+        <button class="btn btn-primary" onclick="handleLogin('normal')">
+          로그인
+        </button>
+        
+        <button class="btn btn-naver" onclick="handleLogin('naver')">
+          <span class="btn-icon">N</span>
+          네이버
+        </button>
+        
+        <button class="btn btn-kakao" onclick="handleLogin('kakao')">
+          <span class="btn-icon">💬</span>
+          카카오
+        </button>
+        
+        <button class="btn btn-apple" onclick="handleLogin('apple')">
+          <span class="btn-icon">🍎</span>
+          Apple로 시작하기
+        </button>
+      </div>
+
+      <div class="signup-link">
+        새로 오셨나요?
+        <button onclick="handleSignup()">가입하기</button>
+      </div>
+    </main>
+  </div>
+
+
+  <script src="js/onboarding.js"></script>
+</body>
+
+</html>
