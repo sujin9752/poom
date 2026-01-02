@@ -9,13 +9,17 @@
 
 html { font-size: 62.5%; }
 
-body {color: var(--black);}
+body {
+  color: var(--black);
+  min-height: 100vh;
+}
 
 ol,ul{
 	list-style-type:none;
 }   
 
 a{
+  display: inline-flex;
 	text-decoration:none;
 	color:inherit;
 }  
@@ -34,8 +38,26 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 em {
   font-style: normal;
+}
+
+.app{
+width: 100%;
+max-width: 390px;
+margin: 0 auto;
+min-height: 100vh;
+}
+
+.content{
+  padding: 0 1.2rem;
+}
+
+.bottom_nav{
+  position: sticky;
+  bottom: 0;
+  padding-bottom: env(safe-area-inset-bottom);
 }

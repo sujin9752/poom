@@ -1,52 +1,12 @@
-body {
-  background: #fff;
-  width: 100vw;
-  height: 100vh;
-}
-
-.intro-container {
-  min-height: 100vh;
+.intro {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 0 5vw;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.intro img { height: 10rem; }
 
-.logo img {
-  width: 7rem;
-  max-width: 12rem;
-  min-width: 6rem;
-  height: auto;
-  display: block;
-}
-
-.logo-text {
-  margin-top: 2rem;
-  font-size: 2.2rem;
-  color: #ed1c24;
-  font-weight: bold;
-  font-family: 'Arial', '맑은 고딕', sans-serif;
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
-
-@media (max-width: 480px) {
-  .intro-container {
-    padding: 0 2vw;
-  }
-  .logo img {
-    width: 6rem;
-    min-width: 4rem;
-    max-width: 9rem;
-  }
-  .logo-text {
-    font-size: 1.8rem;
-  }
-}
+.intro.fade-in { opacity: 1; }
+.intro.fade-out { opacity: 0; }

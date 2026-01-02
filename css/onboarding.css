@@ -1,85 +1,108 @@
-.onboarding-bg {
-  background: var(--main);
+.onboarding-bg{
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: var(--main);
+  overflow-x: hidden;
+}
+
+/* ===== app ===== */
+.onboarding{
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  background: #fd3738;
+}
+.head{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-text{
+  color: var(--white);
+  text-align: center;
+  font-size: var(--fs-16);
+}
+
+.desc{
+  margin-bottom: 2.7rem;
+}
+
+.highlight{
+  font-size: var(--fs-18);
+  font-weight: 700;
+}
+
+.title{
+  font-family: 'JalnanGothic';
+  font-size: 4.5rem;
+  color: var(--sub1);
+  margin-bottom: 1rem;
+}
+
+.benefit{
+  color: var(--white);
+}
+
+.coupon-desc{
+  font-size: var(--fs-16);
+}
+
+.badge{
+  background: var(--sub1);
+  color: var(--main);
+  font-size: var(--fs-18);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.3rem .7rem;
+  margin: 0 0.3rem;
+}
+
+
+/* ===== coupon ===== */
+.coupon{
+  width: 140%;
+  /* max-width: 34rem; */
   position: relative;
 }
 
-.onboarding-section.onboarding-head {
-  width: 100vw;
-  margin-top: 4.5rem;
-  margin-bottom: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.onboarding-head-text {
-  color: var(--white);
-  text-align: center;
-}
-.desc-light {
-  font-size: 2rem;
-  margin-bottom: 2.7rem;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-}
-.desc-light .highlight {
-  font-weight: 700;
-  border-bottom: 2px solid #fff;
-}
-.desc-strong {
-  font-size: 4.2rem;
-  font-weight: 800;
-  color: var(--sub1);
-  line-height: 1.14;
-  margin-bottom: 1rem;
-  letter-spacing: -0.03em;
-}
-.benefit {
-  display: block;
-  color: #fff;
-  font-size: 4.0rem;
-  margin-top: 0.7rem;
-}
-.desc-coupon {
-  color: #fff;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-.coupon-badge {
-  background: #ffe900;
-  color: #fd3738;
-  font-weight: 700;
-  font-size: 2rem;
-  border-radius: 0.7rem;
-  padding: 0.2rem 1.1rem 0.2rem 1.1rem;
-  margin: 0 0.2rem;
-}
-.onboarding-coupon {
-  width: 95vw;
-  max-width: 34rem;
-  position: relative;
-}
-.coupon-main {
+.coupon-main{
   width: 100%;
-  margin-bottom: -4.5rem;
+  margin-bottom: -5rem;
+  position: relative;
   z-index: 2;
-  position: relative;
+  animation: floatLeft 4s ease-in-out infinite;
 }
-.coupon-bottom {
-  width: 80vw;
-  max-width: 28rem;
-  display: block;
-  margin: 0 auto;
+
+.coupon-sub{
+  width: 100%;
+  position: relative;
   z-index: 1;
-  position: relative;
+  animation: floatRight 4s ease-in-out infinite;
 }
-.onboarding-illust-logo {
+
+
+
+@keyframes floatLeft {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-2rem); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes floatRight {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(2rem); }
+  100% { transform: translateX(0); }
+}
+
+
+/* ===== visual ===== */
+.visual{
   margin-top: 4.2rem;
   width: 100vw;
   display: flex;
@@ -87,25 +110,16 @@
   align-items: center;
   justify-content: flex-end;
 }
-.onboarding-illust {
+
+.illust{
   width: 64vw;
   max-width: 32rem;
   margin-bottom: 5.6rem;
 }
-.onboarding-logo {
+
+.logo{
   width: 10.4rem;
   display: block;
   margin: 0 auto 3rem auto;
 }
-@media (max-width: 480px) {
-  .onboarding-head-text .desc-light {font-size: 1.6rem;}
-  .desc-strong {font-size: 3rem;}
-  .benefit {font-size: 2.9rem;}
-  .desc-coupon {font-size: 1.5rem;}
-  .coupon-badge {font-size: 1.2rem;}
-  .onboarding-coupon {max-width: 26rem;}
-  .coupon-main {max-width: 26rem;}
-  .coupon-bottom {max-width: 14rem;}
-  .onboarding-illust {max-width: 16rem;}
-  .onboarding-logo {width: 5rem;}
-}
+
