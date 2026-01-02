@@ -3,18 +3,21 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: var(--main);
   overflow-x: hidden;
 }
 
 /* ===== app ===== */
 .onboarding{
-  min-height: 100vh;
+  height: min-content;
   width: 100%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .head{
   width: 100vw;
   display: flex;
@@ -40,12 +43,20 @@
 
 .title{
   font-family: 'JalnanGothic';
-  font-size: 4.5rem;
+  font-weight: normal;
+  font-size: 5rem;
   color: var(--sub1);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit{
+  font-family: 'JalnanGothic';
+  font-weight: normal;
+  font-size: 5rem;
   color: var(--white);
 }
 
@@ -66,14 +77,14 @@
 
 /* ===== coupon ===== */
 .coupon{
-  width: 140%;
+  width: 200%;
   /* max-width: 34rem; */
   position: relative;
 }
 
 .coupon-main{
   width: 100%;
-  margin-bottom: -5rem;
+  margin-bottom: -15rem;
   position: relative;
   z-index: 2;
   animation: floatLeft 4s ease-in-out infinite;
@@ -86,36 +97,19 @@
   animation: floatRight 4s ease-in-out infinite;
 }
 
-
-
 @keyframes floatLeft {
   0%   { transform: translateX(0); }
-  50%  { transform: translateX(-2rem); }
+  50%  { transform: translateX(-4rem); }
   100% { transform: translateX(0); }
 }
 
 @keyframes floatRight {
   0%   { transform: translateX(0); }
-  50%  { transform: translateX(2rem); }
+  50%  { transform: translateX(4rem); }
   100% { transform: translateX(0); }
 }
 
 
-/* ===== visual ===== */
-.visual{
-  margin-top: 4.2rem;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.illust{
-  width: 64vw;
-  max-width: 32rem;
-  margin-bottom: 5.6rem;
-}
 
 .logo{
   width: 10.4rem;
@@ -123,3 +117,7 @@
   margin: 0 auto 3rem auto;
 }
 
+.onboarding-logo {
+  margin-top: 5rem;
+  width: 9rem;
+}
