@@ -1,148 +1,185 @@
-.login-container {
+.login {
   min-height: 100vh;
-  padding: 20px;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
-.header {
+.login-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* header */
+.login-header {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 
-.skip-btn {
-  padding: 10px 20px;
-  border: 1px solid var(--gray-300);
-  border-radius: 8px;
-  font-size: 1.6rem;
-  cursor: pointer;
+.skip {
+  padding: .7rem 1rem;
+  border: .1rem solid var(--gray-600);
+  border-radius: .5rem;
+  color: var(--gray-600);
+  font-size: 1.4rem;
   transition: all 0.3s;
 }
 
-.skip-btn:hover {
+.skip:hover {
   background-color: var(--gray-100);
 }
 
-.content {
+/* main */
+.login-main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 680px;
+  max-width: 68rem;
   width: 100%;
-  padding: 40px 0;
+  padding: 4rem 0;
 }
 
-.title {
-  text-align: left;
+.login-title {
   width: 100%;
-  margin-bottom: 40px;
 }
 
-.title h1 {
-  font-size: 4.8rem;
-  font-weight: 900;
+.login-title h1 {
+  font-family: 'Jalnan';
+  font-weight: normal;
+  font-size: 5rem;
+  letter-spacing: .2rem;
   line-height: 1.3;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
-.title .highlight {
+.login-title .point {
+  font-family: 'Jalnan';
+  font-weight: normal;
+  font-size: 5rem;
   color: var(--main);
 }
 
-.illustration {
+/* visual */
+.login-visual {
   width: 100%;
   max-width: 33rem;
-  margin: 10rem auto;
+  margin: 0 auto;
 }
 
-.illustration img {
+.visual img {
   width: auto;
-  height: 70%;
 }
 
-.login-buttons {
+/* actions */
+.login-actions {
+  font-family: 'NanumSquare';
+  font-weight: 800;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
+/* button common */
 .btn {
   width: 100%;
-  padding: 18px;
-  border-radius: 12px;
+  padding: 1.8rem;
+  border-radius: 1rem;
   font-size: 1.8rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 1.2rem;
   cursor: pointer;
   transition: all 0.3s;
-  border: 1px solid transparent;
 }
 
 .btn-primary {
   background-color: var(--main);
   color: var(--white);
+  margin-bottom: 2rem;
 }
 
 .btn-primary:hover {
   background-color: #d01820;
 }
 
-.btn-naver {
-  background-color: #03C75A;
-  color: var(--white);
+.btn-other {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  font-size: var(--fs-17);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.btn-naver:hover {
-  background-color: #02b351;
+.btn-other>button {
+  border: .1rem solid var(--gray-600);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 3rem;
+  border-radius: 1rem;
 }
 
-.btn-kakao {
-  background-color: #FEE500;
-  color: #000000;
+.btn-other>button:nth-of-type(1) img,
+.btn-other>button:nth-of-type(2) img {
+  height: 2.2rem;
 }
 
-.btn-kakao:hover {
-  background-color: #f5dc00;
+.btn-other>button:nth-of-type(3) img {
+  height: 2.6rem;
 }
 
-.btn-apple {
-  background-color: var(--black);
-  color: var(--white);
+.btn-other>button span {
+  padding: 1rem;
 }
 
-.btn-apple:hover {
-  background-color: var(--gray-900);
+.btn-other>button:hover{
+  background-color: var(--gray-100);
 }
 
-.btn-icon {
-  width: 24px;
-  height: 24px;
-  font-size: 2.4rem;
+
+/* signup */
+.signup {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.6rem;
+  color: var(--gray-800);
+  position: relative;
+  z-index: 10;
+}
+
+.signup::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--gray-800);
+}
+
+.signup span {
+  font-size: var(--fs-18);
   font-weight: 700;
 }
 
-.signup-link {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 1.6rem;
-  color: var(--gray-700);
+
+.login{
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
-.signup-link button {
-  color: var(--black);
-  font-weight: 600;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-left: 5px;
-}
+/* page fade */
+.login.fade-in { opacity: 1; }
+.login.fade-out { opacity: 0; }

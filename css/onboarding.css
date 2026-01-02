@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   background: var(--main);
-  overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 0.8s ease;
 }
 
 /* ===== app ===== */
@@ -109,8 +110,6 @@
   100% { transform: translateX(0); }
 }
 
-
-
 .logo{
   width: 10.4rem;
   display: block;
@@ -121,3 +120,13 @@
   margin-top: 5rem;
   width: 9rem;
 }
+
+
+
+/* 페이드 인아웃 */
+.onboarding-bg{
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.onboarding-bg.fade-in { opacity: 1; }
+.onboarding-bg.fade-out { opacity: 0; }

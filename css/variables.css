@@ -19,9 +19,18 @@
   --fs-22: 2.2rem;
   --fs-20: 2.0rem;
   --fs-18: 1.8rem;
+  --fs-17: 1.7rem;
   --fs-16: 1.6rem; 
   --fs-14: 1.4rem; 
 
 
   --radius-round: 9999px; 
+}
+
+
+.btn-common {
+  padding: .5rem 1rem ;
+  border-radius: 1rem;
+  border-width: .1rem;
+  border-style: solid;
 }

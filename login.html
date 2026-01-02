@@ -10,54 +10,66 @@
 
 <body>
 
-  <div class="login-container">
-    <header class="header">
-      <button class="skip-btn" onclick="handleSkip()">둘러보기</button>
-    </header>
+  <div class="login">
+    <div class="login-wrap">
 
-    <main class="content">
-      <div class="title">
-        <h1>
-          오늘,<br>
-          당신의 취향을<br>
-          <span class="highlight">품</span>-다.
-        </h1>
-      </div>
+      <header class="login-header">
+        <button class="skip">
+          둘러보기
+        </button>
+      </header>
 
-      <div class="illustration">
-        <img src="img/intro/illust.png" alt="">
-      </div>
+      <main class="login-main">
+        <div class="login-title">
+          <h1>
+            오늘,<br>
+            당신의 취향을<br>
+            <span class="point">품</span>-다.
+          </h1>
+        </div>
 
-      <div class="login-buttons">
-        <button class="btn btn-primary" onclick="handleLogin('normal')">
-          로그인
-        </button>
-        
-        <button class="btn btn-naver" onclick="handleLogin('naver')">
-          <span class="btn-icon">N</span>
-          네이버
-        </button>
-        
-        <button class="btn btn-kakao" onclick="handleLogin('kakao')">
-          <span class="btn-icon">💬</span>
-          카카오
-        </button>
-        
-        <button class="btn btn-apple" onclick="handleLogin('apple')">
-          <span class="btn-icon">🍎</span>
-          Apple로 시작하기
-        </button>
-      </div>
+        <div class="login-visual">
+          <img src="img/intro/illust.png" alt="그림">
+        </div>
 
-      <div class="signup-link">
-        새로 오셨나요?
-        <button onclick="handleSignup()">가입하기</button>
-      </div>
-    </main>
+        <div class="login-actions">
+          <button class="btn btn-primary">
+            로그인
+          </button>
+
+          <div class="btn-other">
+            <button>
+              <img src="img/intro/logo_naver.png" alt="네이버">
+              <span>네이버</span>
+            </button>
+            <button>
+              <img src="img/intro/logo_kakao.png" alt="카카오">
+              <span>카카오</span>
+            </button>
+            <button>
+              <img src="img/intro/logo_apple.png" alt="애플">
+              <span>
+                Apple
+              </span>
+            </button>
+          </div>
+
+        </div>
+
+        <div class="signup" role="button" tabindex="0">
+          새로 오셨나요?
+          <span>가입하기</span>
+        </div>
+      </main>
+
+    </div>
   </div>
 
 
-  <script src="js/onboarding.js"></script>
+  <script src="js/login.js"></script>
+  <script>
+    console.log('login.js loaded');
+  </script>
 </body>
 
 </html>
