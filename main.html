@@ -11,136 +11,391 @@
   </head>
 
   <body>
-    <div class="category">
-      <div class="app category-wrap">
-        <header class="category-header">
-          <button type="button" class="back" aria-label="뒤로가기">
-            <img src="img/intro/icon_back.png" alt="" />
-          </button>
 
-          <h1 class="category-title">카테고리</h1>
+  <div class="main">
+    <div class="app main-wrap">
 
-          <button type="button" class="skip btn-common">건너뛰기</button>
-        </header>
+      <!-- top header -->
+      <header class="main-header">
+        <div class="top-row">
+          <h1 class="logo">
+            <a href="#none" aria-label="POOM home">
+              <img src="img/poom_logoE_red.png" alt="poom">
+            </a>
+          </h1>
 
-        <main class="category-main">
-          <ul class="category-grid">
+          <div class="search">
+            <button type="button" class="search-btn" aria-label="검색">
+              <span class="search-placeholder">오늘은 어떤 게 끌리세요?</span>
+            </button>
+          </div>
+
+          <div class="top-icons">
+            <button type="button" class="icon-btn" aria-label="알림">
+              <img src="img/main/icon_search.png" alt="">
+            </button>
+            <button type="button" class="icon-btn" aria-label="장바구니">
+              <img src="img/main/icon_cart.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <!-- category tabs -->
+        <nav class="tab-row" aria-label="메인 탭">
+          <button type="button" class="tab active">BEST</button>
+          <button type="button" class="tab">기획전</button>
+          <button type="button" class="tab">품 플러스(poom+)</button>
+          <button type="button" class="tab">이벤트</button>
+          <button type="button" class="tab">대량구매문의</button>
+        </nav>
+      </header>
+
+      <main class="main-content">
+
+        <!-- hero slider -->
+        <section class="hero" aria-label="메인 배너">
+          <div class="hero-slider" data-autoplay="1" data-interval="3500">
+            <div class="hero-track">
+              <article class="hero-slide is-active">
+                <a href="#none" class="hero-link">
+                  <img src="img/main/main_visual1.png" alt="메인 배너 1">
+                </a>
+              </article>
+
+              <article class="hero-slide">
+                <a href="#none" class="hero-link">
+                  <img src="img/main/main_visual2.png" alt="메인 배너 2">
+                </a>
+              </article>
+
+              <article class="hero-slide">
+                <a href="#none" class="hero-link">
+                  <img src="img/main/main_visual3.png" alt="메인 배너 3">
+                </a>
+              </article>
+
+              <article class="hero-slide">
+                <a href="#none" class="hero-link">
+                  <img src="img/main/main_visual4.png" alt="메인 배너 4">
+                </a>
+              </article>
+            </div>
+
+            <div class="hero-ui">
+              <button type="button" class="hero-play" aria-label="재생/일시정지">⏸</button>
+              <div class="hero-page" aria-label="배너 페이지">
+                <span class="now">1</span>
+                <span class="slash">/</span>
+                <span class="total">4</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- quick icons -->
+        <section class="quick" aria-label="빠른 메뉴">
+          <ul class="quick-list">
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category01.png" alt="가구/수납" />
-                </div>
-                <p class="card-label">가구/수납</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword1.png" alt="바이품디자인">
+                <span>바이품디자인</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category02.png" alt="홈데코" />
-                </div>
-                <p class="card-label">홈데코</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword2.png" alt="요즘 인기템">
+                <span>요즘 인기템</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category03.png" alt="패브릭/생활" />
-                </div>
-                <p class="card-label">패브릭/생활</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword3.png" alt="최저가도전">
+                <span>최저가도전</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category04.png" alt="키친/푸드" />
-                </div>
-                <p class="card-label">키친/푸드</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword4.png" alt="추천 컬렉션">
+                <span>추천 컬렉션</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category05.png" alt="디자인/문구" />
-                </div>
-                <p class="card-label">디자인/문구</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword5.png" alt="선물 PICK">
+                <span>선물 PICK</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category06.png" alt="취미" />
-                </div>
-                <p class="card-label">취미</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword6.png" alt="오늘의 취향">
+                <span>오늘의 취향</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category07.png" alt="디지털" />
-                </div>
-                <p class="card-label">디지털</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword7.png" alt="집꾸미기">
+                <span>집꾸미기</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category08.png" alt="가전" />
-                </div>
-                <p class="card-label">가전</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword8.png" alt="패션템">
+                <span>패션템</span>
+              </a>
             </li>
-
             <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category09.png" alt="패션" />
-                </div>
-                <p class="card-label">패션</p>
-              </button>
-            </li>
-
-            <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category10.png" alt="뷰티/헬스" />
-                </div>
-                <p class="card-label">뷰티/헬스</p>
-              </button>
-            </li>
-
-            <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category11.png" alt="트래블/캠핑" />
-                </div>
-                <p class="card-label">트래블/캠핑</p>
-              </button>
-            </li>
-
-            <li>
-              <button type="button" class="category-card">
-                <div class="card-illust">
-                  <img src="img/intro/Category12.png" alt="반려동물" />
-                </div>
-                <p class="card-label">반려동물</p>
-              </button>
+              <a href="#none" class="quick-item">
+                <img src="img/main/keyword9.png" alt="독서">
+                <span>독서</span>
+              </a>
             </li>
           </ul>
-        </main>
+        </section>
 
-        <div class="category-footer">
-          <button type="button" class="cta">탐색 시작하기</button>
+        <!-- mid banner -->
+        <section class="banner">
+          <div>
+            <a href="#none" class="banner-link">
+              <img src="img/main/section1.jpg" alt="이긴다 반드시! 2025 가을운동회">
+            </a>
+          </div>
+          <ul>
+            <li>
+              <div>
+                <img src="img/main/s1_card_img01.jpg" alt="기획상품">
+              </div>
+              <h3>도도한날</h3>
+              <h4>
+                금메달 왕메달 초콜릿 내맘대로 문구까지
+              </h4>
+              <p>3,500원</p>
+              <p>10% <em>3,150원</em></p>
+            </li>
+            <li>
+              <div>
+                <img src="img/main/s1_card_img02.jpg" alt="기획상품">
+              </div>
+              <h3>도도한날</h3>
+              <h4>
+                아나초콜렛 간식박스 용돈박스
+              </h4>
+              <p>3,500원</p>
+              <p>10% <em>3,150원</em></p>
+            </li>
+            <li>
+              <div>
+                <img src="img/main/s1_card_img01.jpg" alt="기획상품">
+              </div>
+              <h3>도도한날</h3>
+              <h4>
+                금메달 왕메달 초콜릿 내맘대로 문구까지
+              </h4>
+              <p>3,500원</p>
+              <p>10% <em>3,150원</em></p>
+            </li>
+            <li>
+              <div>
+                <img src="img/main/s1_card_img01.jpg" alt="기획상품">
+              </div>
+              <h3>도도한날</h3>
+              <h4>
+                금메달 왕메달 초콜릿 내맘대로 문구까지
+              </h4>
+              <p>3,500원</p>
+              <p>10% <em>3,150원</em></p>
+            </li>
+            <li>
+              <div>
+                <img src="img/main/s1_card_img01.jpg" alt="기획상품">
+              </div>
+              <h3>도도한날</h3>
+              <h4>
+                금메달 왕메달 초콜릿 내맘대로 문구까지
+              </h4>
+              <p>3,500원</p>
+              <p>10% <em>3,150원</em></p>
+            </li>
+            <li>
+              <div>
+                <img src="img/main/s1_card_img01.jpg" alt="기획상품">
+              </div>
+              <h3>도도한날</h3>
+              <h4>
+                금메달 왕메달 초콜릿 내맘대로 문구까지
+              </h4>
+              <p>3,500원</p>
+              <p>10% <em>3,150원</em></p>
+            </li>
+          </ul>
+        </section>
+
+        <div class="pro-banner">
+          <img src="img/main/banner1.png" alt="">
         </div>
-      </div>
-    </div>
 
-    <script src="js/category.js"></script>
+        <!-- MD Pick -->
+        <section class="md" aria-label="MD's Pick">
+          <div class="sec-head">
+            <h2 class="sec-title">MD’s Pick</h2>
+            <p class="sec-desc">취향을 아는 MD의 감각적인 셀렉션</p>
+          </div>
+
+          <div class="chip-row" role="tablist" aria-label="MD 필터">
+            <button type="button" class="chip active">전체</button>
+            <button type="button" class="chip">디자인문구</button>
+            <button type="button" class="chip">홈데코</button>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <a href="#none" class="thumb">
+                <img src="img/main/md_01.png" alt="">
+              </a>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+              <p class="name">올프레임 Airy Basic Pouch</p>
+              <p class="price"><span class="sale">30%</span> 13,300원</p>
+            </article>
+
+            <article class="card">
+              <a href="#none" class="thumb">
+                <img src="img/main/md_02.png" alt="">
+              </a>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+              <p class="name">오브젝트 인형</p>
+              <p class="price"><span class="sale">10%</span> 13,800원</p>
+            </article>
+
+            <article class="card">
+              <a href="#none" class="thumb">
+                <img src="img/main/md_03.png" alt="">
+              </a>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+              <p class="name">프리미엄 파자마</p>
+              <p class="price"><span class="sale">11%</span> 19,000원</p>
+            </article>
+
+            <article class="card">
+              <a href="#none" class="thumb">
+                <img src="img/main/md_04.png" alt="">
+              </a>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+              <p class="name">바스커버 파우치</p>
+              <p class="price"><span class="sale">18%</span> 15,600원</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- time deal -->
+        <section class="timedeal" aria-label="타임딜">
+          <div class="sec-head">
+            <h2 class="sec-title">Time Deal</h2>
+            <p class="sec-desc">최대 <b>39%</b> · 오늘 단 하루 특가</p>
+          </div>
+
+          <div class="deal-timer" aria-label="남은 시간">
+            <span class="time" id="dealTime">13:59:10</span>
+          </div>
+
+          <ul class="deal-list">
+            <li class="deal-item">
+              <a href="#none" class="deal-thumb">
+                <img src="img/main/deal_01.png" alt="">
+              </a>
+              <div class="deal-info">
+                <p class="deal-name">곰돌이 파우치</p>
+                <p class="deal-price"><span class="sale">20%</span> 19,900원</p>
+              </div>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+            </li>
+
+            <li class="deal-item">
+              <a href="#none" class="deal-thumb">
+                <img src="img/main/deal_02.png" alt="">
+              </a>
+              <div class="deal-info">
+                <p class="deal-name">루미큐브 미니</p>
+                <p class="deal-price"><span class="sale">22%</span> 27,200원</p>
+              </div>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+            </li>
+
+            <li class="deal-item">
+              <a href="#none" class="deal-thumb">
+                <img src="img/main/deal_03.png" alt="">
+              </a>
+              <div class="deal-info">
+                <p class="deal-name">퍼퓸 롤온</p>
+                <p class="deal-price"><span class="sale">39%</span> 7,900원</p>
+              </div>
+              <button type="button" class="heart" aria-label="찜">♡</button>
+            </li>
+          </ul>
+
+          <div class="center">
+            <button type="button" class="btn-outline">전체보기</button>
+          </div>
+        </section>
+
+        <!-- hot banner -->
+        <section class="banner">
+          <a href="#none" class="banner-link">
+            <img src="img/main/banner_mid_02.png" alt="끝없는 할인 혜택">
+          </a>
+        </section>
+
+        <!-- HOT keyword -->
+        <section class="keyword" aria-label="HOT Keyword">
+          <div class="sec-head">
+            <h2 class="sec-title">HOT Keyword</h2>
+          </div>
+
+          <div class="keyword-grid">
+            <a href="#none" class="kw-card">
+              <img src="img/main/kw_01.png" alt="">
+              <span class="tag">#헬레스의프루프</span>
+            </a>
+
+            <a href="#none" class="kw-card">
+              <img src="img/main/kw_02.png" alt="">
+              <span class="tag">#2025</span>
+            </a>
+
+            <a href="#none" class="kw-card">
+              <img src="img/main/kw_03.png" alt="">
+              <span class="tag">#미니멀</span>
+            </a>
+
+            <a href="#none" class="kw-card">
+              <img src="img/main/kw_04.png" alt="">
+              <span class="tag">#데스크테리어</span>
+            </a>
+          </div>
+        </section>
+
+        <div class="spacer"></div>
+      </main>
+
+      <!-- bottom nav -->
+      <nav class="bottom-nav" aria-label="하단 탭">
+        <a href="#none" class="bn-item active" data-tab="home">
+          <img src="img/main/bn_home.png" alt="">
+          <span>홈</span>
+        </a>
+        <a href="#none" class="bn-item" data-tab="menu">
+          <img src="img/main/bn_menu.png" alt="">
+          <span>카테고리</span>
+        </a>
+        <a href="#none" class="bn-item" data-tab="mypage">
+          <img src="img/main/bn_mypage.png" alt="">
+          <span>마이</span>
+        </a>
+      </nav>
+
+    </div>
+  </div>
+
+    
+
+    <script src="js/main.js"></script>
   </body>
 </html>
