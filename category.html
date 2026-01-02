@@ -10,120 +10,140 @@
 
 <body>
 
-  <main class="page" id="page">
-    <!-- 상단바 -->
-    <header class="topbar">
-      <button class="icon-btn" type="button" aria-label="뒤로가기" id="btnBack">
-        <span class="ico-arrow" aria-hidden="true"></span>
-      </button>
+  <div class="category">
+    <div class="app category-wrap">
 
-      <h1 class="topbar-title">카테고리</h1>
+      <header class="category-header">
+        <button type="button" class="back" aria-label="뒤로가기">
+          <img src="img/intro/icon_back.png" alt="">
+        </button>
 
-      <button class="skip-btn" type="button" id="btnSkip">건너뛰기</button>
-    </header>
+        <h1 class="category-title">카테고리</h1>
 
-    <!-- 카드 그리드 -->
-    <section class="content" aria-label="카테고리 선택">
-      <ul class="grid" id="categoryGrid">
-        <li>
-          <button class="card" type="button" data-value="가구/수납" aria-pressed="false">
-            <span class="thumb" aria-hidden="true">
-              <!-- 아이콘은 일단 텍스트/이모지 자리. 너는 SVG/이미지로 교체하면 됨 -->
-              <span class="emoji">🪑</span>
-            </span>
-            <span class="label">가구/수납</span>
-          </button>
-        </li>
+        <button type="button" class="skip btn-common">건너뛰기</button>
+      </header>
 
-        <li>
-          <button class="card" type="button" data-value="홈데코" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🛋️</span></span>
-            <span class="label">홈데코</span>
-          </button>
-        </li>
+      <main class="category-main">
+        <ul class="category-grid">
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category01.png" alt="가구/수납">
+              </div>
+              <p class="card-label">가구/수납</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="패브릭/생활" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🧺</span></span>
-            <span class="label">패브릭/생활</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category02.png" alt="홈데코">
+              </div>
+              <p class="card-label">홈데코</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="키친/푸드" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🍳</span></span>
-            <span class="label">키친/푸드</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category03.png" alt="패브릭/생활">
+              </div>
+              <p class="card-label">패브릭/생활</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="디자인문구" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">✏️</span></span>
-            <span class="label">디자인문구</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category04.png" alt="키친/푸드">
+              </div>
+              <p class="card-label">키친/푸드</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="취미" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">📷</span></span>
-            <span class="label">취미</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category05.png" alt="디자인/문구">
+              </div>
+              <p class="card-label">디자인/문구</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="디지털" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🖥️</span></span>
-            <span class="label">디지털</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category06.png" alt="취미">
+              </div>
+              <p class="card-label">취미</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="가전" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🎧</span></span>
-            <span class="label">가전</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category07.png" alt="디지털">
+              </div>
+              <p class="card-label">디지털</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="패션" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">⌚</span></span>
-            <span class="label">패션</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category08.png" alt="가전">
+              </div>
+              <p class="card-label">가전</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="뷰티/헬스" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🧴</span></span>
-            <span class="label">뷰티/헬스</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category09.png" alt="패션">
+              </div>
+              <p class="card-label">패션</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="트래블/캠핑" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">⛺</span></span>
-            <span class="label">트래블/캠핑</span>
-          </button>
-        </li>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category10.png" alt="뷰티/헬스">
+              </div>
+              <p class="card-label">뷰티/헬스</p>
+            </button>
+          </li>
 
-        <li>
-          <button class="card" type="button" data-value="반려동물" aria-pressed="false">
-            <span class="thumb" aria-hidden="true"><span class="emoji">🐶</span></span>
-            <span class="label">반려동물</span>
-          </button>
-        </li>
-      </ul>
-    </section>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category11.png" alt="트래블/캠핑">
+              </div>
+              <p class="card-label">트래블/캠핑</p>
+            </button>
+          </li>
 
-    <!-- 하단 CTA -->
-    <footer class="cta">
-      <button class="cta-btn" type="button" id="btnStart" disabled>
-        탐색 시작하기
-      </button>
-    </footer>
-  </main>
+          <li>
+            <button type="button" class="category-card">
+              <div class="card-illust">
+                <img src="img/intro/Category12.png" alt="반려동물">
+              </div>
+              <p class="card-label">반려동물</p>
+            </button>
+          </li>
+        </ul>
+      </main>
+
+      <div class="category-footer">
+        <button type="button" class="cta">탐색 시작하기</button>
+      </div>
+
+    </div>
+  </div>
 
 
-  <script src="js/onboarding.js"></script>
+  <script src="js/category.js"></script>
 </body>
 
 </html>

@@ -1,34 +1,46 @@
-(function () {
-  const grid = document.getElementById('categoryGrid');
-  const btnStart = document.getElementById('btnStart');
-  const btnBack = document.getElementById('btnBack');
-  const btnSkip = document.getElementById('btnSkip');
+// js/category.js
+window.addEventListener('DOMContentLoaded', () => {
+  const grid = document.querySelector('.category-grid');
+  const btnStart = document.querySelector('.cta');
+  const btnBack = document.querySelector('.back');
+  const btnSkip = document.querySelector('.skip');
 
-  let selectedValue = null;
+  if (!grid || !btnStart) return;
 
-  function setActive(nextBtn) {
-    const cards = grid.querySelectorAll('.card');
+  let selectedLabel = null;
+
+  // 시작 버튼: 선택 전에는 막기(원하면 CSS로 비활성 스타일도 줄 수 있음)
+  btnStart.disabled = true;
+
+  function setActive(targetBtn) {
+    const cards = grid.querySelectorAll('.category-card');
 
     cards.forEach((btn) => {
-      const isTarget = btn === nextBtn;
-      btn.classList.toggle('is-active', isTarget);
-      btn.setAttribute('aria-pressed', String(isTarget));
+      const isOn = btn === targetBtn;
+      btn.classList.toggle('active', isOn);
+      btn.setAttribute('aria-pressed', String(isOn));
     });
 
-    selectedValue = nextBtn ? nextBtn.dataset.value : null;
-    btnStart.disabled = !selectedValue;
+    // 선택값 저장(텍스트 기준)
+    selectedLabel = targetBtn ? (targetBtn.querySelector('.card-label')?.textContent || '') : null;
+    btnStart.disabled = !selectedLabel;
+
+    // 필요하면 다음 페이지에서 쓰라고 저장
+    if (selectedLabel) {
+      localStorage.setItem('poom_category', selectedLabel);
+    }
   }
 
-  // 카드 클릭: 하나만 선택되게
+  // 클릭: 단일 선택
   grid.addEventListener('click', (e) => {
-    const btn = e.target.closest('.card');
+    const btn = e.target.closest('.category-card');
     if (!btn) return;
     setActive(btn);
   });
 
-  // 키보드 접근성: Enter/Space로도 선택
+  // 키보드 접근: Enter / Space로도 선택
   grid.addEventListener('keydown', (e) => {
-    const btn = e.target.closest('.card');
+    const btn = e.target.closest('.category-card');
     if (!btn) return;
 
     if (e.key === 'Enter' || e.key === ' ') {
@@ -37,22 +49,22 @@
     }
   });
 
+  // 탐색 시작하기 -> main.html
   btnStart.addEventListener('click', () => {
-    if (!selectedValue) return;
-    // 여기서 다음 화면으로 이동/저장 등 처리
-    console.log('선택한 카테고리:', selectedValue);
-
-    // 예시: 다음 페이지 이동
-    // location.href = 'next.html';
+    if (!selectedLabel) return;
+    window.location.href = './main.html';
   });
 
-  btnBack.addEventListener('click', () => {
-    history.back();
-  });
+  // 뒤로가기
+  if (btnBack) {
+    btnBack.addEventListener('click', () => history.back());
+  }
 
-  btnSkip.addEventListener('click', () => {
-    // 스킵 처리
-    console.log('스킵');
-    // location.href = 'next.html';
-  });
-})();
+  // 건너뛰기 -> main.html (원하면 category 선택 화면 스킵이니까 main으로 가는 게 자연스러움)
+  if (btnSkip) {
+    btnSkip.addEventListener('click', () => {
+      localStorage.removeItem('poom_category');
+      window.location.href = './main.html';
+    });
+  }
+});
