@@ -1,128 +1,78 @@
-// js/main.js
-window.addEventListener('DOMContentLoaded', () => {
-  /* ======================
-    hero slider
-  ====================== */
-  const slider = document.querySelector('.hero-slider');
-  if (slider) {
-    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
-    const nowEl = slider.querySelector('.hero-page .now');
-    const totalEl = slider.querySelector('.hero-page .total');
-    const btnPlay = slider.querySelector('.hero-play');
+// quick-list: 드래그(스와이프)로 가로 스크롤
+(function () {
+  const el = document.querySelector('.quick-list');
+  if (!el) return;
 
-    let idx = 0;
-    let timer = null;
-    let playing = slider.dataset.autoplay === '1';
-    const interval = parseInt(slider.dataset.interval || '3500', 10);
+  let isDown = false;
+  let startX = 0;
+  let startY = 0;
+  let scrollLeft = 0;
+  let moved = false;
 
-    if (totalEl) totalEl.textContent = String(slides.length);
+  const DRAG_THRESHOLD = 6;    // 이 이상 움직이면 '드래그'로 인정
+  const VERTICAL_GUARD = 12;   // 세로 움직임이 크면 스크롤(세로) 우선
 
-    function render(n) {
-      slides.forEach((s, i) => s.classList.toggle('is-active', i === n));
-      if (nowEl) nowEl.textContent = String(n + 1);
-    }
-
-    function next() {
-      idx = (idx + 1) % slides.length;
-      render(idx);
-    }
-
-    function start() {
-      if (!playing) return;
-      stop();
-      timer = setInterval(next, interval);
-      if (btnPlay) btnPlay.textContent = '⏸';
-    }
-
-    function stop() {
-      if (timer) clearInterval(timer);
-      timer = null;
-      if (btnPlay) btnPlay.textContent = '▶';
-    }
-
-    render(idx);
-    if (playing) start();
-
-    if (btnPlay) {
-      btnPlay.addEventListener('click', () => {
-        playing = !playing;
-        if (playing) start();
-        else stop();
-      });
-    }
+  function point(e) {
+    if (e.touches && e.touches[0]) return { x: e.touches[0].pageX, y: e.touches[0].pageY };
+    return { x: e.pageX, y: e.pageY };
   }
 
-  /* ======================
-    tab / chip (UI만)
-  ====================== */
-  document.querySelectorAll('.tab-row .tab').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tab-row .tab').forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
+  function onDown(e) {
+    isDown = true;
+    moved = false;
 
-  document.querySelectorAll('.chip-row .chip').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.chip-row .chip').forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
+    const p = point(e);
+    startX = p.x;
+    startY = p.y;
+    scrollLeft = el.scrollLeft;
 
-  /* ======================
-    heart toggle
-  ====================== */
-  document.querySelectorAll('.heart').forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const on = btn.classList.toggle('on');
-      btn.textContent = on ? '♥' : '♡';
-    });
-  });
-
-  /* ======================
-    time deal countdown
-    - 초기 텍스트(13:59:10)에서 1초씩 감소
-  ====================== */
-  const timeEl = document.getElementById('dealTime');
-  if (timeEl) {
-    function parseTime(str) {
-      const parts = (str || '').split(':').map((v) => parseInt(v, 10));
-      if (parts.length !== 3 || parts.some((n) => !Number.isFinite(n))) return 0;
-      return parts[0] * 3600 + parts[1] * 60 + parts[2];
-    }
-
-    function fmt(sec) {
-      const h = Math.floor(sec / 3600);
-      const m = Math.floor((sec % 3600) / 60);
-      const s = sec % 60;
-      return String(h).padStart(2, '0') + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
-    }
-
-    let remain = parseTime(timeEl.textContent);
-
-    const tick = () => {
-      if (remain <= 0) {
-        timeEl.textContent = '00:00:00';
-        return;
-      }
-      remain -= 1;
-      timeEl.textContent = fmt(remain);
-      setTimeout(tick, 1000);
-    };
-
-    tick();
+    el.classList.add('is-dragging');
   }
 
-  /* ======================
-    bottom nav active (UI만)
-  ====================== */
-  const navItems = document.querySelectorAll('.bottom-nav .bn-item');
-  navItems.forEach((a) => {
-    a.addEventListener('click', (e) => {
+  function onMove(e) {
+    if (!isDown) return;
+
+    const p = point(e);
+    const dx = p.x - startX;
+    const dy = p.y - startY;
+
+    // 세로 스크롤이 더 강하면 드래그 취소 (스크롤 우선)
+    if (Math.abs(dy) > VERTICAL_GUARD && Math.abs(dy) > Math.abs(dx)) {
+      isDown = false;
+      el.classList.remove('is-dragging');
+      return;
+    }
+
+    if (Math.abs(dx) > DRAG_THRESHOLD) moved = true;
+
+    // dx 반대로 스크롤
+    el.scrollLeft = scrollLeft - dx;
+
+    // 모바일에서 가로 드래그 중 페이지 스크롤 방지
+    if (e.cancelable) e.preventDefault();
+  }
+
+  function onUp() {
+    isDown = false;
+    el.classList.remove('is-dragging');
+  }
+
+  // a 태그 클릭 방지(드래그로 움직였을 때만)
+  el.addEventListener('click', (e) => {
+    if (moved) {
       e.preventDefault();
-      navItems.forEach((x) => x.classList.remove('active'));
-      a.classList.add('active');
-    });
-  });
-});
+      e.stopPropagation();
+    }
+    moved = false;
+  }, true);
+
+  // touch
+  el.addEventListener('touchstart', onDown, { passive: true });
+  el.addEventListener('touchmove', onMove, { passive: false });
+  el.addEventListener('touchend', onUp, { passive: true });
+
+  // mouse
+  el.addEventListener('mousedown', onDown);
+  window.addEventListener('mousemove', onMove, { passive: false });
+  window.addEventListener('mouseup', onUp);
+})();

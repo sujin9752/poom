@@ -5,7 +5,9 @@
   padding-bottom: 8.6rem; /* 하단 탭 공간 */
 }
 
-/* header */
+/* =========================
+  header
+========================= */
 .main-header{
   position: sticky;
   top: 0;
@@ -97,12 +99,16 @@
   background: var(--gray-100);
 }
 
-/* content spacing */
+/* =========================
+  content
+========================= */
 .main-content{
   padding: 1.2rem 0 0;
 }
 
-/* hero */
+/* =========================
+  hero
+========================= */
 .hero{
   padding: 0 1.6rem;
 }
@@ -116,6 +122,8 @@
 .hero-track{
   position: relative;
   height: 22rem;
+  touch-action: pan-y;
+  user-select: none;
 }
 
 .hero-slide{
@@ -125,9 +133,7 @@
   transition: opacity .35s ease;
 }
 
-.hero-slide.is-active{
-  opacity: 1;
-}
+.hero-slide.is-active{ opacity: 1; }
 
 .hero-link{
   display: block;
@@ -139,6 +145,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
 .hero-ui{
@@ -172,19 +180,26 @@
   font-size: 1.2rem;
 }
 
-/* quick */
+/* =========================
+  quick (가로 스크롤)
+========================= */
 .quick{
-  padding: 1.6rem 1.6rem 0;
+  padding: 1.2rem 0 0;
 }
 
 .quick-list{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 1.6rem;
 }
 
+.quick-list::-webkit-scrollbar{ display:none; }
+
 .quick-list li{
-  width: 23%;
+  display: inline-block;
+  width: 7.2rem;
+  vertical-align: top;
+  margin-right: 1rem;
 }
 
 .quick-item{
@@ -204,11 +219,13 @@
 
 .quick-item span{
   margin-top: .6rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--gray-800);
 }
 
-/* banner */
+/* =========================
+  banners (공통)
+========================= */
 .banner{
   padding: 1.6rem 1.6rem 0;
 }
@@ -225,14 +242,111 @@
   display: block;
 }
 
-/* common titles */
+/* =========================
+  section1: 기획전 가로카드
+========================= */
+.s1 .s1-row{
+  padding-top: 1.2rem;
+}
+
+.s1-list{
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: .4rem;
+}
+
+.s1-list::-webkit-scrollbar{ display:none; }
+
+.s1-card{
+  display: inline-block;
+  width: 14.2rem;
+  vertical-align: top;
+  margin-right: 1.2rem;
+}
+
+.s1-thumb{
+  display: block;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.s1-thumb img{
+  width: 100%;
+  height: 10.4rem;
+  object-fit: cover;
+}
+
+.s1-brand{
+  margin-top: .8rem;
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  font-weight: 700;
+}
+
+.s1-name{
+  margin-top: .3rem;
+  font-size: 1.2rem;
+  color: var(--gray-900);
+  line-height: 1.3;
+  height: 3.1rem;
+  overflow: hidden;
+}
+
+.s1-before{
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  color: var(--gray-500);
+  text-decoration: line-through;
+}
+
+.s1-after{
+  margin-top: .2rem;
+  font-size: 1.2rem;
+  color: var(--gray-900);
+  font-weight: 900;
+}
+
+.s1-after em{
+  font-style: normal;
+}
+
+.sale{
+  color: var(--main);
+  font-weight: 900;
+  margin-right: .4rem;
+}
+
+/* =========================
+  pro banner
+========================= */
+.pro-banner{
+  padding: 1.6rem 1.6rem 0;
+}
+
+.pro-banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1.6rem;
+}
+
+/* =========================
+  section head
+========================= */
 .sec-head{
   padding: 2rem 1.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sec-text{
+  flex: 1;
 }
 
 .sec-title{
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--gray-900);
 }
 
@@ -242,77 +356,37 @@
   color: var(--gray-700);
 }
 
-/* strip */
-.strip{
-  padding-top: .4rem;
-}
-
-.strip-head{
-  padding: 2rem 1.6rem 0;
-  display: flex;
+.sec-plus{
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 999px;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.more{
-  font-size: 1.3rem;
-  color: var(--gray-700);
+.sec-plus img{
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
-.strip-row{
+/* =========================
+  chips
+========================= */
+.chip-row{
   padding: 1.2rem 1.6rem 0;
   overflow-x: auto;
   white-space: nowrap;
 }
 
-.strip-row::-webkit-scrollbar{ display:none; }
-
-.strip-card{
-  display: inline-block;
-  width: 13.5rem;
-  vertical-align: top;
-  margin-right: 1rem;
-}
-
-.strip-card img{
-  width: 100%;
-  height: 10rem;
-  object-fit: cover;
-  border-radius: 1.2rem;
-}
-
-.strip-name{
-  margin-top: .8rem;
-  font-size: 1.2rem;
-  color: var(--gray-900);
-}
-
-.strip-price{
-  margin-top: .3rem;
-  font-size: 1.2rem;
-  color: var(--gray-900);
-  font-weight: 700;
-}
-
-.sale{
-  color: var(--main);
-  margin-right: .4rem;
-  font-weight: 800;
-}
-
-/* chips */
-.chip-row{
-  padding: 1.2rem 1.6rem 0;
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
-}
-
 .chip-row::-webkit-scrollbar{ display:none; }
 
 .chip{
-  flex: 0 0 auto;
-  padding: .7rem 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.2rem;
+  padding: 0 1.2rem;
   border-radius: 999px;
   border: .1rem solid var(--gray-300);
   background: var(--white);
@@ -324,9 +398,12 @@
 .chip.active{
   border-color: var(--main);
   color: var(--main);
+  font-weight: 900;
 }
 
-/* product grid */
+/* =========================
+  MD grid
+========================= */
 .grid{
   padding: 1.2rem 1.6rem 0;
   display: flex;
@@ -366,22 +443,31 @@
   font-size: 1.6rem;
 }
 
-.card .name{
+.name{
   margin-top: .8rem;
   font-size: 1.2rem;
   color: var(--gray-900);
   line-height: 1.3;
 }
 
-.card .price{
+.price{
   margin-top: .3rem;
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--gray-900);
 }
 
-/* time deal */
-.timedeal .deal-timer{
+/* =========================
+  time deal
+========================= */
+.timedeal .time-deco{
+  width: 1.8rem;
+  height: 1.8rem;
+  vertical-align: middle;
+  margin: 0 .4rem;
+}
+
+.deal-timer{
   padding: 1rem 1.6rem 0;
   display: flex;
   justify-content: center;
@@ -405,7 +491,6 @@
   background: var(--gray-100);
   padding: 1rem;
   margin-bottom: 1rem;
-  position: relative;
 }
 
 .deal-thumb{
@@ -430,7 +515,7 @@
 .deal-name{
   font-size: 1.3rem;
   color: var(--gray-900);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .deal-price{
@@ -445,7 +530,7 @@
   margin-left: .8rem;
 }
 
-/* button outline */
+/* outline btn */
 .center{
   padding: 1rem 1.6rem 0;
   display: flex;
@@ -460,30 +545,38 @@
   color: var(--gray-800);
 }
 
-/* keywords */
-.keyword{
-  padding-bottom: 1.6rem;
+/* =========================
+  HOT Keyword: 가로 스크롤 컬럼
+========================= */
+.keyword-row{
+  padding: 1.2rem 0 0;
 }
 
 .keyword-grid{
-  padding: 1.2rem 1.6rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 0 1.6rem;
+}
+
+.keyword-grid::-webkit-scrollbar{ display:none; }
+
+.kw-col{
+  display: inline-block;
+  width: 25rem;
+  vertical-align: top;
+  margin-right: 1.2rem;
 }
 
 .kw-card{
-  width: calc(50% - .6rem);
+  position: relative;
+  display: block;
   border-radius: 1.6rem;
   overflow: hidden;
-  background: var(--gray-100);
-  margin-bottom: 1.2rem;
-  position: relative;
 }
 
 .kw-card img{
   width: 100%;
-  height: 12rem;
+  height: 14rem;
   object-fit: cover;
 }
 
@@ -498,11 +591,60 @@
   font-size: 1.2rem;
 }
 
+.kw-list{
+  margin-top: 1rem;
+}
+
+.kw-item{
+  border-radius: 1.6rem;
+  background: var(--white);
+  box-shadow: 0 0 .6rem rgba(0,0,0,.06);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kw-thumb{
+  display: block;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.kw-thumb img{
+  width: 100%;
+  height: 10.5rem;
+  object-fit: cover;
+}
+
+.kw-brand{
+  margin-top: .8rem;
+  font-size: 1.1rem;
+  color: var(--gray-700);
+  font-weight: 800;
+}
+
+.kw-name{
+  margin-top: .3rem;
+  font-size: 1.2rem;
+  color: var(--gray-900);
+  line-height: 1.3;
+  height: 3.1rem;
+  overflow: hidden;
+}
+
+.kw-price{
+  margin-top: .5rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--gray-900);
+}
+
 .spacer{
   height: 1.6rem;
 }
 
-/* bottom nav */
+/* =========================
+  bottom nav
+========================= */
 .bottom-nav{
   position: fixed;
   left: 0;
@@ -519,7 +661,7 @@
 }
 
 .bn-item{
-  width: 33.3333%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -536,5 +678,5 @@
 
 .bn-item.active{
   color: var(--main);
-  font-weight: 800;
+  font-weight: 900;
 }

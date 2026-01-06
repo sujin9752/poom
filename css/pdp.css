@@ -1,0 +1,494 @@
+/* product.css */
+
+.pdp-wrap{
+  min-height: 100vh;
+  padding-bottom: 8.6rem; /* buy-bar 공간 */
+}
+
+/* header */
+.pdp-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 5.6rem;
+  background: var(--white);
+  border-bottom: .1rem solid var(--gray-200);
+  padding: 0 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back{
+  width: 4.4rem;
+  height: 4.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back img{
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.pdp-logo img{
+  height: 2.2rem;
+  width: auto;
+}
+
+.header-actions{
+  display: flex;
+  align-items: center;
+}
+
+.icon-btn{
+  width: 4.4rem;
+  height: 4.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn img{
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/* hero image */
+.pdp-hero img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* info */
+.pdp-info{
+  padding: 1.6rem 1.6rem 0;
+}
+
+.brand-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--gray-800);
+  font-weight: 700;
+}
+
+.brand .chev{
+  margin-left: .4rem;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.name{
+  margin-top: .8rem;
+  font-size: 1.6rem;
+  color: var(--gray-900);
+  line-height: 1.35;
+  font-weight: 800;
+}
+
+.option{
+  margin-top: .4rem;
+  font-size: 1.3rem;
+  color: var(--gray-700);
+}
+
+.rating-row{
+  margin-top: .8rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--gray-700);
+}
+
+.star{
+  color: var(--main);
+  margin-right: .4rem;
+}
+
+.rating{
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-right: .6rem;
+}
+
+.review-link{
+  color: var(--gray-700);
+  text-decoration: underline;
+}
+
+.price-row{
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.2rem; /* 혹시 gap 쓰기 싫으면 아래 대체 참고 */
+}
+
+/* gap 대체가 필요하면: .price-row{display:flex} .price-left{margin-right:1.2rem} 이런 식으로 구조 나누면 돼 */
+
+.discount{
+  font-size: 1.3rem;
+  color: var(--gray-700);
+}
+
+.sale{
+  color: var(--main);
+  font-weight: 900;
+  margin-right: .4rem;
+}
+
+.before{
+  text-decoration: line-through;
+  color: var(--gray-500);
+}
+
+.now{
+  margin-top: .4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.now-big{
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--main);
+  line-height: 1.1;
+}
+
+.badge{
+  margin-top: .4rem;
+  font-size: 1.2rem;
+  color: var(--gray-700);
+}
+
+.benefit-btn{
+  height: 3.6rem;
+  padding: 0 1.2rem;
+  border-radius: 1rem;
+  background: var(--main);
+  color: var(--white);
+  font-weight: 900;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}
+
+.store-row{
+  margin-top: 1.2rem;
+}
+
+.store-btn{
+  width: 100%;
+  height: 5.2rem;
+  border-radius: 1.2rem;
+  border: .1rem solid var(--gray-300);
+  background: var(--white);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gray-900);
+}
+
+/* meta */
+.pdp-meta{
+  margin-top: 1.6rem;
+  border-top: .1rem solid var(--gray-200);
+  border-bottom: .1rem solid var(--gray-200);
+  padding: 1.2rem 1.6rem;
+}
+
+.meta-item{
+  display: flex;
+  align-items: flex-start;
+  padding: .8rem 0;
+}
+
+.meta-item dt{
+  width: 7.2rem;
+  font-size: 1.2rem;
+  color: var(--gray-700);
+  font-weight: 800;
+}
+
+.meta-item dd{
+  flex: 1;
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  line-height: 1.4;
+}
+
+.highlight{
+  color: var(--main);
+  font-weight: 900;
+}
+
+/* tabs */
+.pdp-tabs{
+  padding: 1.2rem 1.6rem 0;
+}
+
+.tabs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: .1rem solid var(--gray-200);
+}
+
+.tab{
+  width: 33.3333%;
+  height: 4.2rem;
+  font-size: 1.4rem;
+  color: var(--gray-700);
+  font-weight: 800;
+}
+
+.tab.active{
+  color: var(--gray-900);
+  border-bottom: .2rem solid var(--gray-900);
+}
+
+/* basic */
+.pdp-basic{
+  padding: 1.2rem 1.6rem 0;
+}
+
+.basic-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  border-bottom: .1rem solid var(--gray-200);
+}
+
+.basic-row .label{
+  font-size: 1.3rem;
+  color: var(--gray-700);
+  font-weight: 800;
+}
+
+.basic-row .value{
+  font-size: 1.3rem;
+  color: var(--gray-900);
+  font-weight: 800;
+}
+
+/* detail image + more */
+.pdp-detail{
+  padding: 1.2rem 0 0;
+}
+
+.detail-media{
+  width: 100%;
+}
+
+.detail-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 접힘 상태 */
+.detail-media.is-collapsed{
+  max-height: 60rem;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 아래 흐림(선택) */
+.detail-media.is-collapsed::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10rem;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+  pointer-events: none;
+}
+
+.detail-more{
+  padding: 1.2rem 1.6rem 0;
+}
+
+.more-btn{
+  width: 100%;
+  height: 4.8rem;
+  border-radius: 1.2rem;
+  border: .1rem solid var(--gray-300);
+  background: var(--white);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--gray-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-btn .chev{
+  margin-left: .6rem;
+  font-size: 1.6rem;
+}
+
+/* banner */
+.pdp-banner{
+  padding: 1.6rem 1.6rem 0;
+}
+
+.banner-link{
+  display: block;
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.banner-link img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* reco */
+.pdp-reco{
+  padding: 1.6rem 1.6rem 0;
+}
+
+.reco-title{
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--gray-900);
+}
+
+.reco-list{
+  margin-top: 1.2rem;
+}
+
+.reco-item{
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: .1rem solid var(--gray-200);
+}
+
+.reco-thumb{
+  width: 7.6rem;
+  height: 7.6rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex: 0 0 auto;
+}
+
+.reco-thumb img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reco-info{
+  flex: 1;
+}
+
+.reco-name{
+  font-size: 1.3rem;
+  color: var(--gray-900);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.reco-price{
+  margin-top: .4rem;
+  font-size: 1.3rem;
+  color: var(--gray-900);
+  font-weight: 900;
+}
+
+/* footer */
+.pdp-footer{
+  padding: 2rem 1.6rem 2.4rem;
+  color: var(--gray-600);
+}
+
+.foot-nav{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foot-nav a{
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+  margin-bottom: .6rem;
+}
+
+.copy{
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.bottom-spacer{
+  height: 2rem;
+}
+
+/* buy bar */
+.buy-bar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 390px;
+  margin: 0 auto;
+  height: 6.6rem;
+  padding: .8rem 1.2rem;
+  padding-bottom: calc(env(safe-area-inset-bottom) + .8rem);
+  background: var(--white);
+  border-top: .1rem solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  z-index: 60;
+}
+
+.buy-icon{
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 1.2rem;
+  border: .1rem solid var(--gray-300);
+  background: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: .8rem;
+}
+
+.buy-icon img{
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.buy-btn{
+  height: 4.6rem;
+  border-radius: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-btn.ghost{
+  flex: 1;
+  border: .1rem solid var(--main);
+  color: var(--main);
+  background: var(--white);
+  margin-right: .8rem;
+}
+
+.buy-btn.primary{
+  flex: 1;
+  background: var(--main);
+  color: var(--white);
+}
