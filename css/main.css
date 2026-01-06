@@ -412,104 +412,216 @@
 }
 
 /* =========================
-  MD grid
+  MD's Pick
 ========================= */
-.grid{
+.md-head{
+  padding: 2rem 1.6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.md-head-txt{ flex: 1; }
+
+.md-title{
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gray-900);
+}
+
+.md-desc{
+  margin-top: .4rem;
+  font-size: 1.3rem;
+  color: var(--gray-700);
+}
+
+/* 우측 + 버튼 */
+.md-more{
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 999px;
+  border: .2rem solid var(--gray-900);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md-more img{
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/* =========================
+  MD 칩(카테고리)
+  - 캡쳐처럼: 흰 배경 + 빨간 테두리 + 라운드
+========================= */
+.md-chip-row{
+  padding: 1.2rem 1.6rem 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.md-chip-row::-webkit-scrollbar{ display:none; }
+
+.md-chip{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6rem;
+  padding: 0 1.8rem;
+  border-radius: 999px;
+
+  border: .2rem solid var(--main);
+  background: var(--white);
+  color: var(--gray-900);
+
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  margin-right: 1.2rem;
+}
+
+.md-chip:last-child{ margin-right: 0; }
+
+/* 선택 상태(캡쳐는 거의 동일해 보여서 “텍스트만 강조”로) */
+.md-chip.is-active{
+  color: var(--main);
+  font-weight: 900;
+}
+
+/* =========================
+  MD 상품 그리드
+========================= */
+.md-grid{
   padding: 1.2rem 1.6rem 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.card{
+.md-card{
   width: calc(50% - .6rem);
   margin-bottom: 1.6rem;
   position: relative;
 }
 
-.thumb{
+.md-thumb{
   display: block;
   border-radius: 1.2rem;
   overflow: hidden;
 }
 
-.thumb img{
+.md-thumb img{
   width: 100%;
   height: 15rem;
   object-fit: cover;
 }
 
-.heart{
+/* 하트(캡쳐처럼 이미지 위 오른쪽) */
+.md-heart{
   position: absolute;
   right: .8rem;
-  top: .8rem;
-  width: 3.2rem;
-  height: 3.2rem;
-  border-radius: 999px;
-  background: rgba(255,255,255,.85);
+  top: 11.8rem;           /* 썸네일 하단쯤 걸치게 */
+  width: 3.6rem;
+  height: 3.6rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.6rem;
+
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--main);
 }
 
-.name{
-  margin-top: .8rem;
-  font-size: 1.2rem;
-  color: var(--gray-900);
-  line-height: 1.3;
+/* 꽉 찬 하트 느낌(첫 번째 카드처럼) */
+.md-heart.is-on{
+  font-size: 2.6rem;
 }
 
-.price{
-  margin-top: .3rem;
+.md-brand{
+  margin-top: .9rem;
   font-size: 1.3rem;
   font-weight: 900;
   color: var(--gray-900);
 }
 
-/* =========================
-  time deal
-========================= */
-.timedeal .time-deco{
-  width: 1.8rem;
-  height: 1.8rem;
-  vertical-align: middle;
-  margin: 0 .4rem;
+.md-name{
+  margin-top: .3rem;
+  font-size: 1.2rem;
+  color: var(--gray-700);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+.md-price{
+  margin-top: .4rem;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--main);
+}
+
+.md-sale{
+  margin-right: .6rem;
+  font-weight: 900;
+}
+
+/* =========================
+  Time Deal (캡쳐 스타일)
+========================= */
+.deal{
+  padding: 2rem 0 0;
+}
+
+/* 상단 이미지(반원 그래픽) */
+.deal-hero{
+  padding: 0 1.6rem;
+}
+
+.deal-hero-img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 타이머 (빨간 숫자만) */
 .deal-timer{
-  padding: 1rem 1.6rem 0;
+  padding: .8rem 0 0;
   display: flex;
   justify-content: center;
 }
 
-.deal-timer .time{
-  font-size: 1.8rem;
+.deal-time{
+  font-size: 2.2rem;
   font-weight: 900;
   color: var(--main);
   letter-spacing: .06em;
 }
 
+/* 리스트 */
 .deal-list{
-  padding: 1.2rem 1.6rem 0;
+  padding: 1.6rem 1.6rem 0;
 }
 
 .deal-item{
   display: flex;
   align-items: center;
-  border-radius: 1.6rem;
-  background: var(--gray-100);
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 1.8rem 0;
+  border-bottom: .1rem solid var(--gray-200);
 }
 
+/* 원형 썸네일 */
 .deal-thumb{
-  width: 8rem;
-  height: 8rem;
-  border-radius: 1.2rem;
+  width: 12.6rem;
+  height: 12.6rem;
+  border-radius: 999px;
   overflow: hidden;
-  margin-right: 1rem;
+  border: .2rem solid var(--gray-200);
   flex: 0 0 auto;
+  margin-right: 1.6rem;
+  background: var(--white);
 }
 
 .deal-thumb img{
@@ -518,135 +630,246 @@
   object-fit: cover;
 }
 
+/* 오른쪽 텍스트 */
 .deal-info{
   flex: 1;
+  min-width: 0; /* 말줄임 안정 */
+}
+
+.deal-sale{
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--main);
+  margin-bottom: .4rem;
+}
+
+.deal-brand{
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--gray-900);
+  margin-bottom: .4rem;
 }
 
 .deal-name{
-  font-size: 1.3rem;
-  color: var(--gray-900);
-  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--gray-700);
+  line-height: 1.2;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
+/* 가격 (현재가 + 취소선) */
 .deal-price{
-  margin-top: .4rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: .8rem; /* gap 호환성 주의! */
+}
+
+/* ✅ gap 호환성 걱정되면 아래로 대체
+.deal-now{ margin-right: .8rem; }
+*/
+
+.deal-now{
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--main);
+}
+
+.deal-before{
   font-size: 1.3rem;
+  color: var(--gray-500);
+  text-decoration: line-through;
+}
+
+/* 하트(오른쪽) */
+.deal-heart{
+  width: 3.6rem;
+  height: 3.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: var(--main);
+  margin-left: 1.2rem;
+}
+
+/* =========================
+  HOT Keyword (캡쳐 스타일)
+========================= */
+.kw-head{
+  padding: 2rem 1.6rem 0;
+}
+
+.kw-title{
+  font-size: 1.8rem;
   font-weight: 900;
   color: var(--gray-900);
 }
 
-.deal-item .heart{
-  position: static;
-  margin-left: .8rem;
-}
-
-/* outline btn */
-.center{
-  padding: 1rem 1.6rem 0;
-  display: flex;
-  justify-content: center;
-}
-
-.btn-outline{
-  height: 3.6rem;
-  padding: 0 1.4rem;
-  border-radius: 999px;
-  border: .1rem solid var(--gray-300);
-  color: var(--gray-800);
-}
-
-/* =========================
-  HOT Keyword: 가로 스크롤 컬럼
-========================= */
-.keyword-row{
+/* 가로 스크롤 */
+.kw-row{
   padding: 1.2rem 0 0;
 }
 
-.keyword-grid{
+.kw-track{
   overflow-x: auto;
   white-space: nowrap;
   padding: 0 1.6rem;
 }
 
-.keyword-grid::-webkit-scrollbar{ display:none; }
+.kw-track::-webkit-scrollbar{ display:none; }
 
+/* 컬럼(배경색 + 둥근 박스) */
 .kw-col{
   display: inline-block;
   width: 25rem;
   vertical-align: top;
   margin-right: 1.2rem;
+
+  border-radius: 1.6rem;
+  padding: 1.2rem;
 }
 
-.kw-card{
+.kw-col:last-child{ margin-right: 0; }
+
+/* 배경색(캡쳐 느낌) */
+.kw-col--blue{ background: #cfeef7; }
+.kw-col--yellow{ background: #fff0b3; }
+.kw-col--green{ background: #dff1c3; }
+
+/* 상단 타이틀 이미지 */
+.kw-top{
   position: relative;
   display: block;
-  border-radius: 1.6rem;
+  border-radius: 1.2rem;
   overflow: hidden;
+  margin-bottom: 1.2rem;
 }
 
-.kw-card img{
+.kw-top-img{
   width: 100%;
-  height: 14rem;
+  height: 8.6rem;
   object-fit: cover;
+  display: block;
 }
 
-.kw-card .tag{
+/* 좌상단 태그 */
+.kw-tag{
   position: absolute;
   left: 1rem;
-  bottom: 1rem;
-  padding: .5rem .9rem;
+  top: 1rem;
+  padding: .4rem .8rem;
   border-radius: 999px;
   background: rgba(0,0,0,.35);
   color: var(--white);
   font-size: 1.2rem;
+  font-weight: 900;
 }
 
-.kw-list{
-  margin-top: 1rem;
+/* 우상단 ~23% 같은 텍스트 */
+.kw-rate{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--white);
+  text-shadow: 0 .1rem .2rem rgba(0,0,0,.25);
 }
+
+/* 리스트 */
+.kw-list{ }
 
 .kw-item{
-  border-radius: 1.6rem;
   background: var(--white);
-  box-shadow: 0 0 .6rem rgba(0,0,0,.06);
-  padding: 1rem;
+  border-radius: 1.2rem;
+  padding: .9rem;
   margin-bottom: 1rem;
+
+  display: flex;
+  align-items: center;
 }
 
+.kw-item:last-child{ margin-bottom: 0; }
+
+/* 왼쪽 썸네일(작게) */
 .kw-thumb{
-  display: block;
-  border-radius: 1.2rem;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 1rem;
   overflow: hidden;
+  flex: 0 0 auto;
+  margin-right: 1rem;
 }
 
 .kw-thumb img{
   width: 100%;
-  height: 10.5rem;
+  height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+/* 가운데 텍스트 */
+.kw-txt{
+  flex: 1;
+  min-width: 0; /* 말줄임 안정 */
 }
 
 .kw-brand{
-  margin-top: .8rem;
   font-size: 1.1rem;
-  color: var(--gray-700);
-  font-weight: 800;
+  font-weight: 900;
+  color: var(--gray-900);
 }
 
 .kw-name{
   margin-top: .3rem;
   font-size: 1.2rem;
-  color: var(--gray-900);
-  line-height: 1.3;
-  height: 3.1rem;
+  color: var(--gray-700);
+
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .kw-price{
   margin-top: .5rem;
   font-size: 1.2rem;
   font-weight: 900;
-  color: var(--gray-900);
+  color: var(--main);
 }
+
+.kw-sale{
+  margin-right: .5rem;
+  font-weight: 900;
+}
+
+.kw-before{
+  margin-left: .6rem;
+  font-size: 1.1rem;
+  color: var(--gray-500);
+  text-decoration: line-through;
+}
+
+/* 오른쪽 하트 */
+.kw-heart{
+  width: 3.2rem;
+  height: 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.2rem;
+  color: var(--main);
+  margin-left: .6rem;
+}
+
+.kw-heart.is-on{
+  font-size: 2.3rem;
+}
+
 
 .spacer{
   height: 1.6rem;

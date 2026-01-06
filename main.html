@@ -97,7 +97,7 @@
           <ul class="quick-list">
             <!-- li 9개 그대로 -->
             <li><a href="#none" class="quick-item"><img src="img/main/keyword1.png" alt=""><span>바이품디자인</span></a></li>
-            <li><a href="#none" class="quick-item"><img src="img/main/keyword2.png" alt=""><span>요즘 인기템</span></a></li>
+            <li><a href="pdp.html" class="quick-item"><img src="img/main/keyword2.png" alt=""><span>요즘 인기템</span></a></li>
             <li><a href="#none" class="quick-item"><img src="img/main/keyword3.png" alt=""><span>최저가도전</span></a></li>
             <li><a href="#none" class="quick-item"><img src="img/main/keyword4.png" alt=""><span>추천 컬렉션</span></a></li>
             <li><a href="#none" class="quick-item"><img src="img/main/keyword5.png" alt=""><span>선물 PICK</span></a></li>
@@ -177,71 +177,123 @@
 
         <!-- MD Pick -->
         <section class="md" aria-label="MD's Pick">
-          <div class="sec-head">
-            <div class="sec-text">
-              <h2 class="sec-title">MD's Pick</h2>
-              <p class="sec-desc">취향을 아는 MD의 감각적인 셀렉션</p>
+          <div class="md-head">
+            <div class="md-head-txt">
+              <h2 class="md-title">MD's Pick</h2>
+              <p class="md-desc">취향을 아는 MD의 감각적인 셀렉션</p>
             </div>
-            <button type="button" class="sec-plus" aria-label="더보기">
+
+            <button type="button" class="md-more" aria-label="더보기">
               <img src="img/main/icon_plus.png" alt="">
             </button>
           </div>
 
-          <div class="chip-row" role="tablist" aria-label="MD 필터">
-            <button type="button" class="chip">전체</button>
-            <button type="button" class="chip">디자인문구</button>
-            <button type="button" class="chip active">패션</button>
-            <button type="button" class="chip">홈데코</button>
+          <!-- ✅ 캡쳐처럼: 빨간 라운드 칩 -->
+          <div class="md-chip-row" role="tablist" aria-label="MD 필터">
+            <button type="button" class="md-chip is-active">전체</button>
+            <button type="button" class="md-chip">디자인문구</button>
+            <button type="button" class="md-chip">패션</button>
+            <button type="button" class="md-chip">홈데코</button>
           </div>
 
-          <div class="grid">
-            <!-- card 반복 -->
-            <article class="card">
-              <a href="#none" class="thumb"><img src="img/main/s2_card_img01.jpg" alt=""></a>
-              <button type="button" class="heart" aria-label="찜">♡</button>
-              <p class="s2-brand">올뉴프레임</p>
-              <p class="s2-name">
-                Airy Basic Pouch - HAPPY2
-              </p>
-              <p class="price"><span class="sale">30%</span> 13,300원</p>
+          <div class="md-grid">
+            <article class="md-card">
+              <a href="#none" class="md-thumb"><img src="img/main/s2_card_img01.jpg" alt=""></a>
+              <button type="button" class="md-heart is-on" aria-label="찜">♥</button>
+
+              <p class="md-brand">올뉴프레임</p>
+              <p class="md-name">Airy Basic Pouch - HAPPY2</p>
+              <p class="md-price"><span class="md-sale">30%</span> 13,300원</p>
+            </article>
+
+            <article class="md-card">
+              <a href="#none" class="md-thumb"><img src="img/main/s2_card_img02.jpg" alt=""></a>
+              <button type="button" class="md-heart" aria-label="찜">♡</button>
+
+              <p class="md-brand">아트박스</p>
+              <p class="md-name">엉금이 동전지갑 (28…</p>
+              <p class="md-price"><span class="md-sale">10%</span> 13,800원</p>
             </article>
             <!-- ... -->
           </div>
         </section>
 
+
         <!-- Time Deal -->
-        <section class="timedeal" aria-label="타임딜">
-          <div class="sec-head">
-            <div class="sec-text">
-              <h2 class="sec-title">Time Deal</h2>
-              <p class="sec-desc">
-                최대 <b>39%</b> 할인
-                <img class="time-deco" src="img/main/s3_deco_plus.png" alt="">
-                오늘 단 하루 특가
-              </p>
-            </div>
+        <section class="deal" aria-label="타임딜">
+
+          <!-- 상단 반원 배너(이미지로 넣기) -->
+          <div class="deal-hero" aria-label="타임딜 배너">
+            <img class="deal-hero-img" src="img/main/s3_timedeal_top.png" alt="">
+
           </div>
 
+          <!-- 남은 시간 (빨간 숫자) -->
           <div class="deal-timer" aria-label="남은 시간">
-            <span class="time" id="dealTime">13:59:10</span>
+            <span class="deal-time" id="dealTime">13:59:10</span>
           </div>
 
+          <!-- 상품 리스트 -->
           <ul class="deal-list">
             <li class="deal-item">
-              <a href="#none" class="deal-thumb"><img src="img/main/s3_img01.jpg" alt=""></a>
+              <a href="#none" class="deal-thumb">
+                <img src="img/main/s3_img01.jpg" alt="">
+              </a>
+
               <div class="deal-info">
-                <p class="deal-name">곰돌이 파우치</p>
-                <p class="deal-price"><span class="sale">20%</span> 19,900원</p>
+                <p class="deal-sale">20%</p>
+                <p class="deal-brand">아트박스</p>
+                <p class="deal-name">충전식 오스팩 곰돌이</p>
+
+                <div class="deal-price">
+                  <p class="deal-now">19,900원</p>
+                  <p class="deal-before">15,920원</p>
+                </div>
               </div>
-              <button type="button" class="heart" aria-label="찜">♡</button>
+
+              <button type="button" class="deal-heart" aria-label="찜">♡</button>
             </li>
-            <!-- ... -->
+            <li class="deal-item">
+              <a href="#none" class="deal-thumb">
+                <img src="img/main/s3_img02.jpg" alt="">
+              </a>
+
+              <div class="deal-info">
+                <p class="deal-sale">20%</p>
+                <p class="deal-brand">아트박스</p>
+                <p class="deal-name">충전식 오스팩 곰돌이</p>
+
+                <div class="deal-price">
+                  <p class="deal-now">19,900원</p>
+                  <p class="deal-before">15,920원</p>
+                </div>
+              </div>
+
+              <button type="button" class="deal-heart" aria-label="찜">♡</button>
+            </li>
+            <li class="deal-item">
+              <a href="#none" class="deal-thumb">
+                <img src="img/main/s3_img03.jpg" alt="">
+              </a>
+
+              <div class="deal-info">
+                <p class="deal-sale">20%</p>
+                <p class="deal-brand">아트박스</p>
+                <p class="deal-name">충전식 오스팩 곰돌이</p>
+
+                <div class="deal-price">
+                  <p class="deal-now">19,900원</p>
+                  <p class="deal-before">15,920원</p>
+                </div>
+              </div>
+
+              <button type="button" class="deal-heart" aria-label="찜">♡</button>
+            </li>
+
           </ul>
 
-          <div class="center">
-            <button type="button" class="btn-outline">전체보기</button>
-          </div>
         </section>
+
 
         <section class="banner">
           <a href="#none" class="banner-link">
@@ -250,38 +302,74 @@
         </section>
 
         <!-- HOT keyword -->
-        <section class="keyword" aria-label="HOT Keyword">
-          <div class="sec-head">
-            <div class="sec-text">
-              <h2 class="sec-title">HOT Keyword</h2>
-            </div>
+        <section class="kw" aria-label="HOT Keyword">
+          <div class="kw-head">
+            <h2 class="kw-title">HOT Keyword</h2>
           </div>
 
-          <div class="keyword-row">
-            <div class="keyword-grid">
-              <!-- 3열(또는 여러개) 그대로 -->
-              <!-- column -->
-              <div class="kw-col">
-                <a href="#none" class="kw-card">
-                  <img src="img/main/s4_titlecard1.jpg" alt="">
-                  <span class="tag">#웰레스와 그로밋</span>
+          <div class="kw-row">
+            <div class="kw-track">
+
+              <!-- column 1 -->
+              <div class="kw-col kw-col--blue">
+                <a href="#none" class="kw-top" aria-label="키워드">
+                  <img class="kw-top-img" src="img/main/s4_titlecard1.jpg" alt="">
+
                 </a>
 
                 <ul class="kw-list">
                   <li class="kw-item">
-                    <a href="#none" class="kw-thumb"><img src="img/main/s4_img1.jpg" alt=""></a>
-                    <p class="kw-brand">드림씨앤씨</p>
-                    <p class="kw-name">[공식정품] 그로밋 맥그로우 펭귄 중형 인형 - 40cm</p>
-                    <p class="kw-price"><span class="sale">23%</span> 13,900원</p>
+                    <a href="pdp.html" class="kw-thumb"><img src="img/main/s4_img1.jpg" alt=""></a>
+                    <div class="kw-txt">
+                      <p class="kw-brand">드림씨앤씨</p>
+                      <p class="kw-name">[공식정품] 그로밋 맥그로우 펭귄 중형 인형 - 40cm</p>
+                      <p class="kw-price"><span class="kw-sale">23%</span> 13,900원 <del class="kw-before">18,000원</del></p>
+                    </div>
+                    <button type="button" class="kw-heart is-on" aria-label="찜">♥</button>
                   </li>
-                  <!-- ... -->
+
+                  <li class="kw-item">
+                    <a href="#none" class="kw-thumb"><img src="img/main/s4_img2.jpg" alt=""></a>
+                    <div class="kw-txt">
+                      <p class="kw-brand">핑크풋</p>
+                      <p class="kw-name">켈러 씬스와 그로밋 3색 볼펜</p>
+                      <p class="kw-price"><span class="kw-sale">10%</span> 2,700원 <del class="kw-before">3,000원</del></p>
+                    </div>
+                    <button type="button" class="kw-heart" aria-label="찜">♡</button>
+                  </li>
                 </ul>
               </div>
 
-              <!-- 나머지 kw-col 반복 -->
+              <!-- column 2 -->
+              <div class="kw-col kw-col--yellow">
+                <a href="#none" class="kw-top">
+                  <img class="kw-top-img" src="img/main/s4_titlecard2.jpg" alt="">
+                  <span class="kw-tag">#2026 다이어리</span>
+                  <span class="kw-rate">~ 20%</span>
+                </a>
+
+                <ul class="kw-list">
+                  <!-- kw-item 반복 -->
+                </ul>
+              </div>
+
+              <!-- column 3 -->
+              <div class="kw-col kw-col--green">
+                <a href="#none" class="kw-top">
+                  <img class="kw-top-img" src="img/main/s4_titlecard3.jpg" alt="">
+                  <span class="kw-tag">#아트박스 부적</span>
+                  <span class="kw-rate">NEW</span>
+                </a>
+
+                <ul class="kw-list">
+                  <!-- kw-item 반복 -->
+                </ul>
+              </div>
+
             </div>
           </div>
         </section>
+
 
         <div class="spacer"></div>
       </main>

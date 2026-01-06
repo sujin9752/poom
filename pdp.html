@@ -20,21 +20,21 @@
         <header class="pdp-header" aria-label="상품 상세 상단">
           <div class="pdp-top-row">
             <button type="button" class="pdp-icon-btn pdp-back" aria-label="뒤로가기">
-              <img src="" alt="">
+              <img src="img/pdp/icon_right.png" alt="">
             </button>
 
             <h1 class="pdp-logo">
               <a href="#none" aria-label="POOM home">
-                <img src="" alt="">
+                <img src="img/poom_logoE_red.png" alt="">
               </a>
             </h1>
 
             <div class="pdp-top-icons">
               <button type="button" class="pdp-icon-btn" aria-label="검색">
-                <img src="" alt="">
+                <img src="img/main/icon_search.png" alt="">
               </button>
               <button type="button" class="pdp-icon-btn" aria-label="장바구니">
-                <img src="" alt="">
+                <img src="img/main/icon_cart.png" alt="">
               </button>
             </div>
           </div>
@@ -45,7 +45,7 @@
           <!-- hero image -->
           <section class="pdp-hero" aria-label="상품 대표 이미지">
             <div class="pdp-hero-img">
-              <img src="" alt="">
+              <img src="img/pdp/sub_visual.jpg" alt="">
             </div>
           </section>
 
@@ -53,7 +53,7 @@
           <section class="pdp-summary" aria-label="상품 요약">
             <div class="pdp-brand-row">
               <button type="button" class="pdp-badge" aria-label="브랜드">
-                <img src="" alt="">
+                <img src="img/pdp/icon_star_line.png" alt="">
               </button>
               <a href="#none" class="pdp-brand">드림씨앤씨</a>
               <span class="pdp-brand-arrow" aria-hidden="true">›</span>
@@ -66,7 +66,7 @@
                 <span class="pdp-rate-star" aria-hidden="true">★</span>
                 <b>5.0</b>
                 <span class="pdp-meta-sub">|</span>
-                <a href="#reviews" class="pdp-meta-link">12 리뷰 보기</a>
+                <a href="#reviews" class="pdp-meta-link">2 후기 보기</a>
               </span>
             </div>
 
@@ -79,12 +79,11 @@
               <div class="pdp-price-main">
                 <strong class="pdp-final">13,900원</strong>
                 <span class="pdp-benefit-tag">
-                  <img src="" alt="">
+                  <img src="img/pdp/icon_sell.png" alt="">
                   <em>품플러스 혜택가</em>
                 </span>
                 <button type="button" class="pdp-benefit-btn" aria-label="혜택받기">
-                  <img src="" alt="">
-                  <span>혜택받기</span>
+                  <img src="img/pdp/btn_copon.png" alt="">
                 </button>
               </div>
 
@@ -120,18 +119,11 @@
 
           <!-- detail (image above 펼쳐보기) -->
           <section class="pdp-detail" id="info" aria-label="상품 상세">
-            <!-- ✅ 펼쳐보기 바로 위 '상세이미지' : img 태그만 / src 비움 -->
-            <div class="pdp-detail-hero">
-              <img src="" alt="">
-            </div>
 
             <!-- fold area -->
             <div class="pdp-fold" data-collapsed="1" aria-label="상세 이미지 펼쳐보기">
               <div class="pdp-fold-inner">
-                <!-- 여기에 상세 이미지들을 통으로 넣을 예정이면 img 여러개든, 1개든 그대로 꽂으면 됨 -->
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+                <img src="img/pdp/PDP.jpg" alt="">
               </div>
 
               <div class="pdp-fold-dim" aria-hidden="true"></div>
@@ -143,20 +135,108 @@
             </div>
           </section>
 
-          <!-- reviews / qa anchors (구간용) -->
-          <section class="pdp-section" id="reviews" aria-label="상품 후기">
-            <h3 class="pdp-section-title">상품후기</h3>
-            <div class="pdp-section-box">
-              <p class="pdp-empty">후기 영역</p>
+          
+          <!-- ✅ seller box -->
+          <section class="pdp-seller" aria-label="판매자 정보">
+            <div class="pdp-seller-row">
+              <div class="pdp-seller-txt">
+                <p class="pdp-seller-name">드림씨앤씨</p>
+                <p class="pdp-seller-tags">#공식정품 #그로밋키링 #무민인형</p>
+              </div>
+
+              <button type="button" class="pdp-seller-fav" aria-label="판매자 찜">
+                <img src="" alt="">
+              </button>
             </div>
           </section>
 
-          <section class="pdp-section" id="qa" aria-label="Q&amp;A">
-            <h3 class="pdp-section-title">Q&amp;A</h3>
-            <div class="pdp-section-box">
-              <p class="pdp-empty">Q&amp;A 영역</p>
-            </div>
+          <!-- ✅ seller event banner -->
+          <section class="pdp-event" aria-label="판매자 기획전">
+            <h3 class="pdp-event-title">[드림씨앤씨] 캐릭터 특가전</h3>
+
+            <a href="#none" class="pdp-event-box" aria-label="특가전 배너">
+              <div class="pdp-event-img">
+                <img src="" alt="">
+              </div>
+
+              <div class="pdp-event-txt">
+                <p class="pdp-event-desc">하나를 사도 제대로-<br>공식정품으로 만나보세요!</p>
+                <p class="pdp-event-rate">~39%</p>
+              </div>
+            </a>
           </section>
+
+          <!-- ✅ seller recommended -->
+          <section class="pdp-reco" aria-label="판매자 추천 상품">
+            <h3 class="pdp-reco-title">판매자 추천 상품</h3>
+
+            <ul class="pdp-reco-list">
+              <li class="pdp-reco-item">
+                <a href="#none" class="pdp-reco-thumb"><img src="" alt=""></a>
+
+                <div class="pdp-reco-info">
+                  <p class="pdp-reco-name">[공식정품] 월레스와 그로밋 키링 인형 - 16cm</p>
+                  <div class="pdp-reco-price">
+                    <span class="pdp-reco-before">12,000원</span>
+                    <span class="pdp-reco-sale">18%</span>
+                    <strong class="pdp-reco-now">9,800원</strong>
+                  </div>
+                </div>
+
+                <button type="button" class="pdp-reco-heart" aria-label="찜">♡</button>
+              </li>
+
+              <li class="pdp-reco-item">
+                <a href="#none" class="pdp-reco-thumb"><img src="" alt=""></a>
+
+                <div class="pdp-reco-info">
+                  <p class="pdp-reco-name">[공식정품] 숀더쉽 키링 인형 - 16cm</p>
+                  <div class="pdp-reco-price">
+                    <span class="pdp-reco-before">12,000원</span>
+                    <span class="pdp-reco-sale">18%</span>
+                    <strong class="pdp-reco-now">9,800원</strong>
+                  </div>
+                </div>
+
+                <button type="button" class="pdp-reco-heart" aria-label="찜">♡</button>
+              </li>
+            </ul>
+          </section>
+
+          <!-- ✅ footer (캡쳐 하단) -->
+          <footer class="pdp-footer" aria-label="푸터">
+            <nav class="pdp-foot-nav" aria-label="푸터 메뉴">
+              <a href="#none">POOM</a>
+              <a href="#none">회사소개</a>
+              <a href="#none">고객감동센터</a>
+              <a href="#none">매장안내</a>
+              <a href="#none">APP 설치</a>
+            </nav>
+
+            <div class="pdp-foot-company">
+              <button type="button" class="pdp-foot-brand" aria-label="브랜드 선택">
+                (주) 아트박스 <span aria-hidden="true">∨</span>
+              </button>
+
+              <p class="pdp-foot-copy">© 2020 ARTBOX CO., LTD ALL RIGHTS RESERVED</p>
+
+              <div class="pdp-foot-bottom">
+                <div class="pdp-sns">
+                  <a href="#none" aria-label="instagram"><img src="" alt=""></a>
+                  <a href="#none" aria-label="facebook"><img src="" alt=""></a>
+                  <a href="#none" aria-label="youtube"><img src="" alt=""></a>
+                </div>
+
+                <div class="pdp-escrow" aria-label="에스크로">
+                  <img src="" alt="">
+                </div>
+              </div>
+
+              <button type="button" class="pdp-top" aria-label="맨 위로">
+                <img src="" alt="">
+              </button>
+            </div>
+          </footer>
 
           <div class="pdp-spacer"></div>
         </main>
@@ -164,11 +244,11 @@
         <!-- bottom action -->
         <nav class="pdp-bottom" aria-label="구매 하단 영역">
           <button type="button" class="pdp-like" aria-label="찜">
-            <img src="" alt="">
+            <img src="img/pdp/icon_heart_line.png" alt="">
           </button>
 
           <button type="button" class="pdp-gift" aria-label="선물하기">
-            <img src="" alt="">
+            <img src="img/pdp/icon_gift.png" alt="">
             <span>선물하기</span>
           </button>
 
