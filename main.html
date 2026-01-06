@@ -5,7 +5,6 @@
   <title>Poom</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
@@ -23,7 +22,12 @@
 
           <div class="search">
             <button type="button" class="search-btn" aria-label="검색">
-              <span class="search-placeholder">오늘은 어떤 게 끌리세요?</span>
+              <input
+                type="search"
+                class="search-input"
+                placeholder="오늘은 어떤 게 끌리세요?"
+                aria-label="검색"
+              />
             </button>
           </div>
 
@@ -106,30 +110,63 @@
 
         <!-- section1: 기획전(배너 + 가로카드) -->
         <section class="banner s1" aria-label="기획전">
-          <a href="#none" class="banner-link">
-            <img src="img/main/section1.jpg" alt="이긴다 반드시! 2025 가을운동회">
-          </a>
 
           <div class="s1-row" aria-label="기획 상품 목록">
             <ul class="s1-list">
               <!-- li 반복 -->
               <li class="s1-card">
                 <a href="#none" class="s1-thumb"><img src="img/main/s1_card_img01.jpg" alt=""></a>
-                <p class="s1-brand">도도한날</p>
-                <p class="s1-name">금메달 왕메달 초콜릿 내맘대로 문구까지</p>
-                <p class="s1-before">3,500원</p>
-                <p class="s1-after"><span class="sale">10%</span> <em>3,150원</em></p>
+                <div class="s1-txt">
+                  <p class="s1-brand">도도한날</p>
+                  <p class="s1-name">금메달 왕메달 초콜릿 내맘대로 문구까지</p>
+                  <p class="s1-before">3,500원</p>
+                  <p class="s1-after"><span class="sale">10%</span> <em>3,150원</em></p>
+                </div>
               </li>
 
               <li class="s1-card">
                 <a href="#none" class="s1-thumb"><img src="img/main/s1_card_img02.jpg" alt=""></a>
-                <p class="s1-brand">도도한날</p>
-                <p class="s1-name">아나초콜렛 간식박스 용돈박스</p>
-                <p class="s1-before">3,500원</p>
-                <p class="s1-after"><span class="sale">10%</span> <em>3,150원</em></p>
+                <div class="s1-txt">
+                  <p class="s1-brand">도도한날</p>
+                  <p class="s1-name">아나초콜렛 간식박스 용돈박스</p>
+                  <p class="s1-before">9,900원</p>
+                  <p class="s1-after"><span class="sale">10%</span> <em>8,910원</em></p>
+                </div>
               </li>
 
-              <!-- 나머지 동일 -->
+              <li class="s1-card">
+                <a href="#none" class="s1-thumb"><img src="img/main/s1_card_img03.jpg" alt=""></a>
+                <div class="s1-txt">
+                  <p class="s1-brand">위니비니</p>
+                  <p class="s1-name">
+                    터틀 구미(GUMMI TURTLES, FILLED)
+                  </p>
+                  <p class="s1-before">2,500원</p>
+                  <p class="s1-after"><span class="sale">5%</span> <em>2,3700원</em></p>
+                </div>
+              </li>
+
+              <li class="s1-card">
+                <a href="#none" class="s1-thumb"><img src="img/main/s1_card_img04.jpg" alt=""></a>
+                <div class="s1-txt">
+                  <p class="s1-brand">아트박스</p>
+                  <p class="s1-name">병젤리 닭발모양젤리 (24013253)</p>
+                  <p class="s1-before">3,900원</p>
+                  <p class="s1-after"><span class="sale">10%</span> <em>3,510원</em></p>
+                </div>
+              </li>
+
+              <li class="s1-card">
+                <a href="#none" class="s1-thumb"><img src="img/main/s1_card_img05.jpg" alt=""></a>
+                <div class="s1-txt">
+                  <p class="s1-brand">마전동상회</p>
+                  <p class="s1-name">제티캔 코코아 초코 음료 초콜렛 드링크 175ml 30개</p>
+                  <p class="s1-before">24,400원</p>
+                  <p class="s1-after"><span class="sale">10%</span> <em>21,960원</em></p>
+                </div>
+              </li>
+
+
             </ul>
           </div>
         </section>
@@ -162,7 +199,10 @@
             <article class="card">
               <a href="#none" class="thumb"><img src="img/main/s2_card_img01.jpg" alt=""></a>
               <button type="button" class="heart" aria-label="찜">♡</button>
-              <p class="name">올프레임 Airy Basic Pouch</p>
+              <p class="s2-brand">올뉴프레임</p>
+              <p class="s2-name">
+                Airy Basic Pouch - HAPPY2
+              </p>
               <p class="price"><span class="sale">30%</span> 13,300원</p>
             </article>
             <!-- ... -->

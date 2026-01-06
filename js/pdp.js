@@ -1,43 +1,48 @@
-// js/product.js
-window.addEventListener('DOMContentLoaded', () => {
-  const btnBack = document.querySelector('.back');
-  const btnMore = document.getElementById('btnMore');
-  const detailMedia = document.getElementById('detailMedia');
+// pdp.js
+document.addEventListener('DOMContentLoaded', () => {
+  // 펼쳐보기 토글
+  const fold = document.querySelector('.pdp-fold');
+  const btn = document.querySelector('.pdp-fold-btn');
+  const text = document.querySelector('.pdp-fold-text');
+  const arrow = document.querySelector('.pdp-fold-arrow');
 
-  // 뒤로가기
-  if (btnBack) {
-    btnBack.addEventListener('click', () => history.back());
-  }
+  if (fold && btn && text && arrow) {
+    btn.addEventListener('click', () => {
+      const isCollapsed = fold.getAttribute('data-collapsed') === '1';
 
-  // 펼쳐보기
-  if (btnMore && detailMedia) {
-    btnMore.addEventListener('click', () => {
-      const collapsed = detailMedia.classList.contains('is-collapsed');
+      if (isCollapsed) {
+        fold.setAttribute('data-collapsed', '0');
+        btn.setAttribute('aria-expanded', 'true');
+        text.textContent = '접기';
+        arrow.textContent = '⌃';
+      } else {
+        fold.setAttribute('data-collapsed', '1');
+        btn.setAttribute('aria-expanded', 'false');
+        text.textContent = '펼쳐보기';
+        arrow.textContent = '⌄';
 
-      detailMedia.classList.toggle('is-collapsed', !collapsed);
-
-      // 버튼 텍스트/aria 업데이트
-      btnMore.setAttribute('aria-expanded', String(collapsed));
-      btnMore.innerHTML = collapsed
-        ? '접기 <span class="chev" aria-hidden="true">˄</span>'
-        : '펼쳐보기 <span class="chev" aria-hidden="true">˅</span>';
-
-      // 접기로 돌아갈 때, 상세 상단으로 살짝 이동(원하면 제거 가능)
-      if (!collapsed) {
-        detailMedia.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 접을 때 버튼 위치로 자연스럽게 복귀
+        const top = fold.getBoundingClientRect().top + window.scrollY - 110;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   }
 
-  // 탭 UI (기본정보만 활성 예시)
-  const tabs = document.querySelectorAll('.tabs .tab');
-  if (tabs.length) {
-    tabs.forEach((t) => {
-      t.addEventListener('click', () => {
-        tabs.forEach((x) => x.classList.remove('active'));
-        t.classList.add('active');
-        // 실제 탭 콘텐츠 전환은 필요하면 추가해줄게 (지금은 UI만)
-      });
+  // 탭 클릭 → 해당 섹션으로 스크롤
+  const tabs = document.querySelectorAll('.pdp-tab');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('is-active'));
+      tab.classList.add('is-active');
+
+      const id = tab.dataset.tab;
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      // sticky header+tabs 고려 오프셋
+      const offset = 5.2 * 10 + 4.6 * 10 + 16; // rem(10px 기준) + 여유
+      const y = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     });
-  }
+  });
 });

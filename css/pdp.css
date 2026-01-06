@@ -1,458 +1,438 @@
-/* product.css */
+/* pdp.css */
 
+/* wrap */
 .pdp-wrap{
   min-height: 100vh;
-  padding-bottom: 8.6rem; /* buy-bar 공간 */
+  padding-bottom: 7.8rem; /* 하단 구매바 공간 */
+  background: var(--white);
 }
 
-/* header */
+/* =========================
+  header
+========================= */
 .pdp-header{
   position: sticky;
   top: 0;
-  z-index: 50;
-  height: 5.6rem;
+  z-index: 80;
   background: var(--white);
   border-bottom: .1rem solid var(--gray-200);
+}
+
+.pdp-top-row{
+  height: 5.2rem;
   padding: 0 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.back{
-  width: 4.4rem;
-  height: 4.4rem;
-  display: inline-flex;
+.pdp-back{
+  margin-right: .4rem;
+}
+
+.pdp-logo{
+  margin: 0;
+  width: 5.4rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.back img{
-  width: 2.2rem;
-  height: 2.2rem;
-}
+.pdp-logo a{ display: inline-flex; }
 
 .pdp-logo img{
+  display: block;
   height: 2.2rem;
   width: auto;
 }
 
-.header-actions{
+.pdp-top-icons{
+  margin-left: auto;
   display: flex;
   align-items: center;
 }
 
-.icon-btn{
-  width: 4.4rem;
-  height: 4.4rem;
+.pdp-icon-btn{
+  width: 3.6rem;
+  height: 3.6rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.icon-btn img{
+.pdp-icon-btn img{
   width: 2.2rem;
   height: 2.2rem;
 }
 
-/* hero image */
-.pdp-hero img{
+/* =========================
+  content
+========================= */
+.pdp-content{
+  padding: 0;
+}
+
+.pdp-hero{
+  background: var(--white);
+}
+
+.pdp-hero-img{
   width: 100%;
-  height: auto;
-  display: block;
 }
 
-/* info */
-.pdp-info{
-  padding: 1.6rem 1.6rem 0;
+.pdp-hero-img img{
+  width: 100%;
+  height: 31rem;
+  object-fit: cover;
 }
 
-.brand-row{
+/* summary */
+.pdp-summary{
+  padding: 1.4rem 1.6rem 1.6rem;
+  border-bottom: .1rem solid var(--gray-200);
+}
+
+.pdp-brand-row{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: .8rem;
 }
 
-.brand{
+.pdp-badge{
+  width: 2.2rem;
+  height: 2.2rem;
   display: inline-flex;
   align-items: center;
-  font-size: 1.3rem;
-  color: var(--gray-800);
-  font-weight: 700;
-}
-
-.brand .chev{
-  margin-left: .4rem;
-  font-size: 1.6rem;
-  line-height: 1;
-}
-
-.name{
-  margin-top: .8rem;
-  font-size: 1.6rem;
-  color: var(--gray-900);
-  line-height: 1.35;
-  font-weight: 800;
-}
-
-.option{
-  margin-top: .4rem;
-  font-size: 1.3rem;
-  color: var(--gray-700);
-}
-
-.rating-row{
-  margin-top: .8rem;
-  display: flex;
-  align-items: center;
-  font-size: 1.3rem;
-  color: var(--gray-700);
-}
-
-.star{
-  color: var(--main);
-  margin-right: .4rem;
-}
-
-.rating{
-  font-weight: 800;
-  color: var(--gray-900);
+  justify-content: center;
   margin-right: .6rem;
 }
 
-.review-link{
-  color: var(--gray-700);
-  text-decoration: underline;
+.pdp-badge img{
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
-.price-row{
-  margin-top: 1.2rem;
+.pdp-brand{
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  font-weight: 800;
+}
+
+.pdp-brand-arrow{
+  margin-left: .4rem;
+  color: var(--gray-500);
+  font-size: 1.4rem;
+}
+
+.pdp-title{
+  font-size: 1.6rem;
+  line-height: 1.35;
+  color: var(--gray-900);
+  font-weight: 900;
+  margin: 0 0 .8rem 0;
+}
+
+.pdp-meta{
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 1.2rem; /* 혹시 gap 쓰기 싫으면 아래 대체 참고 */
+  align-items: center;
+  margin-bottom: 1.2rem;
 }
 
-/* gap 대체가 필요하면: .price-row{display:flex} .price-left{margin-right:1.2rem} 이런 식으로 구조 나누면 돼 */
+.pdp-rate{
+  font-size: 1.2rem;
+  color: var(--gray-800);
+  display: inline-flex;
+  align-items: center;
+}
 
-.discount{
+.pdp-rate-star{
+  color: var(--main);
+  margin-right: .4rem;
   font-size: 1.3rem;
+}
+
+.pdp-meta-sub{
+  margin: 0 .6rem;
+  color: var(--gray-400);
+}
+
+.pdp-meta-link{
   color: var(--gray-700);
 }
 
-.sale{
+.pdp-price{
+  border: .1rem solid var(--gray-200);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+  background: var(--white);
+}
+
+.pdp-price-top{
+  display: flex;
+  align-items: baseline;
+  margin-bottom: .6rem;
+}
+
+.pdp-sale{
   color: var(--main);
   font-weight: 900;
+  font-size: 1.3rem;
+  margin-right: .6rem;
+}
+
+.pdp-before{
+  color: var(--gray-500);
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+
+.pdp-price-main{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pdp-final{
+  font-size: 2.2rem;
+  color: var(--gray-900);
+  font-weight: 900;
+  margin-right: .8rem;
+}
+
+.pdp-benefit-tag{
+  display: inline-flex;
+  align-items: center;
+  background: var(--gray-100);
+  border-radius: 9999px;
+  padding: .4rem .8rem;
+  margin-right: .8rem;
+}
+
+.pdp-benefit-tag img{
+  width: 1.6rem;
+  height: 1.6rem;
   margin-right: .4rem;
 }
 
-.before{
-  text-decoration: line-through;
-  color: var(--gray-500);
+.pdp-benefit-tag em{
+  font-style: normal;
+  font-size: 1.1rem;
+  color: var(--gray-800);
+  font-weight: 800;
 }
 
-.now{
-  margin-top: .4rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.now-big{
-  font-size: 2.2rem;
-  font-weight: 900;
-  color: var(--main);
-  line-height: 1.1;
-}
-
-.badge{
-  margin-top: .4rem;
-  font-size: 1.2rem;
-  color: var(--gray-700);
-}
-
-.benefit-btn{
-  height: 3.6rem;
-  padding: 0 1.2rem;
-  border-radius: 1rem;
+.pdp-benefit-btn{
+  margin-left: auto;
+  height: 3.2rem;
+  padding: 0 1rem;
+  border-radius: 9999px;
   background: var(--main);
   color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
   font-weight: 900;
-  font-size: 1.3rem;
-  white-space: nowrap;
 }
 
-.store-row{
-  margin-top: 1.2rem;
+.pdp-benefit-btn img{
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: .4rem;
 }
 
-.store-btn{
+.pdp-store-btn{
   width: 100%;
-  height: 5.2rem;
-  border-radius: 1.2rem;
+  height: 4.2rem;
+  border-radius: 1rem;
   border: .1rem solid var(--gray-300);
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: var(--gray-800);
   background: var(--white);
-  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--gray-900);
 }
 
-/* meta */
-.pdp-meta{
-  margin-top: 1.6rem;
+.pdp-info-list{
+  margin-top: 1.2rem;
   border-top: .1rem solid var(--gray-200);
-  border-bottom: .1rem solid var(--gray-200);
-  padding: 1.2rem 1.6rem;
+  padding-top: 1.2rem;
 }
 
-.meta-item{
+.pdp-info-row{
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: .8rem 0;
+  border-bottom: .1rem solid var(--gray-100);
 }
 
-.meta-item dt{
+.pdp-info-row:last-child{
+  border-bottom: 0;
+}
+
+.pdp-info-k{
   width: 7.2rem;
   font-size: 1.2rem;
   color: var(--gray-700);
   font-weight: 800;
+  flex: 0 0 auto;
 }
 
-.meta-item dd{
+.pdp-info-v{
   flex: 1;
   font-size: 1.2rem;
-  color: var(--gray-800);
-  line-height: 1.4;
+  color: var(--gray-900);
 }
 
-.highlight{
-  color: var(--main);
-  font-weight: 900;
-}
-
-/* tabs */
+/* =========================
+  tabs (sticky 느낌)
+========================= */
 .pdp-tabs{
-  padding: 1.2rem 1.6rem 0;
-}
-
-.tabs{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  position: sticky;
+  top: 5.2rem; /* header height */
+  z-index: 70;
+  background: var(--white);
   border-bottom: .1rem solid var(--gray-200);
 }
 
-.tab{
-  width: 33.3333%;
-  height: 4.2rem;
-  font-size: 1.4rem;
-  color: var(--gray-700);
-  font-weight: 800;
-}
-
-.tab.active{
-  color: var(--gray-900);
-  border-bottom: .2rem solid var(--gray-900);
-}
-
-/* basic */
-.pdp-basic{
-  padding: 1.2rem 1.6rem 0;
-}
-
-.basic-row{
+.pdp-tab-row{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 0;
-  border-bottom: .1rem solid var(--gray-200);
+  padding: 0 1.6rem;
+  height: 4.6rem;
 }
 
-.basic-row .label{
+.pdp-tab{
+  flex: 1;
+  height: 100%;
   font-size: 1.3rem;
   color: var(--gray-700);
-  font-weight: 800;
+  font-weight: 900;
+  border-bottom: .2rem solid transparent;
 }
 
-.basic-row .value{
-  font-size: 1.3rem;
+.pdp-tab.is-active{
   color: var(--gray-900);
-  font-weight: 800;
+  border-bottom-color: var(--main);
 }
 
-/* detail image + more */
+/* =========================
+  detail
+========================= */
 .pdp-detail{
-  padding: 1.2rem 0 0;
+  padding: 0;
+  background: var(--white);
 }
 
-.detail-media{
-  width: 100%;
-}
-
-.detail-media img{
+.pdp-detail-hero img{
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* 접힘 상태 */
-.detail-media.is-collapsed{
-  max-height: 60rem;
-  overflow: hidden;
+/* fold */
+.pdp-fold{
   position: relative;
+  padding: 0 0 0;
 }
 
-/* 아래 흐림(선택) */
-.detail-media.is-collapsed::after{
-  content: "";
+.pdp-fold-inner{
+  padding: 0;
+}
+
+.pdp-fold-inner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* collapsed state */
+.pdp-fold[data-collapsed="1"] .pdp-fold-inner{
+  max-height: 56rem;
+  overflow: hidden;
+}
+
+/* dim */
+.pdp-fold-dim{
+  display: none;
+}
+
+.pdp-fold[data-collapsed="1"] .pdp-fold-dim{
+  display: block;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  height: 10rem;
+  bottom: 4.6rem; /* 버튼 높이만큼 위 */
+  height: 12rem;
   background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
   pointer-events: none;
 }
 
-.detail-more{
-  padding: 1.2rem 1.6rem 0;
-}
-
-.more-btn{
+/* fold button */
+.pdp-fold-btn{
   width: 100%;
-  height: 4.8rem;
-  border-radius: 1.2rem;
-  border: .1rem solid var(--gray-300);
+  height: 4.6rem;
+  border-top: .1rem solid var(--gray-200);
   background: var(--white);
-  font-size: 1.4rem;
-  font-weight: 900;
-  color: var(--gray-900);
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--gray-900);
 }
 
-.more-btn .chev{
+.pdp-fold-arrow{
   margin-left: .6rem;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* sections */
+.pdp-section{
+  padding: 2rem 1.6rem 0;
+}
+
+.pdp-section-title{
+  margin: 0 0 1rem 0;
   font-size: 1.6rem;
-}
-
-/* banner */
-.pdp-banner{
-  padding: 1.6rem 1.6rem 0;
-}
-
-.banner-link{
-  display: block;
-  border-radius: 1.6rem;
-  overflow: hidden;
-}
-
-.banner-link img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* reco */
-.pdp-reco{
-  padding: 1.6rem 1.6rem 0;
-}
-
-.reco-title{
-  font-size: 1.5rem;
   font-weight: 900;
   color: var(--gray-900);
 }
 
-.reco-list{
-  margin-top: 1.2rem;
-}
-
-.reco-item{
-  display: flex;
-  align-items: center;
-  padding: 1rem 0;
-  border-bottom: .1rem solid var(--gray-200);
-}
-
-.reco-thumb{
-  width: 7.6rem;
-  height: 7.6rem;
+.pdp-section-box{
+  border: .1rem solid var(--gray-200);
   border-radius: 1.2rem;
-  overflow: hidden;
-  margin-right: 1rem;
-  flex: 0 0 auto;
+  padding: 1.6rem;
+  background: var(--gray-100);
 }
 
-.reco-thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.reco-info{
-  flex: 1;
-}
-
-.reco-name{
+.pdp-empty{
   font-size: 1.3rem;
-  color: var(--gray-900);
-  font-weight: 800;
-  line-height: 1.35;
+  color: var(--gray-700);
 }
 
-.reco-price{
-  margin-top: .4rem;
-  font-size: 1.3rem;
-  color: var(--gray-900);
-  font-weight: 900;
-}
-
-/* footer */
-.pdp-footer{
-  padding: 2rem 1.6rem 2.4rem;
-  color: var(--gray-600);
-}
-
-.foot-nav{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.foot-nav a{
-  font-size: 1.2rem;
-  margin-right: 1.2rem;
-  margin-bottom: .6rem;
-}
-
-.copy{
-  margin-top: 1rem;
-  font-size: 1.1rem;
-}
-
-.bottom-spacer{
+.pdp-spacer{
   height: 2rem;
 }
 
-/* buy bar */
-.buy-bar{
+/* =========================
+  bottom action
+========================= */
+.pdp-bottom{
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   max-width: 390px;
   margin: 0 auto;
-  height: 6.6rem;
-  padding: .8rem 1.2rem;
-  padding-bottom: calc(env(safe-area-inset-bottom) + .8rem);
   background: var(--white);
   border-top: .1rem solid var(--gray-200);
+  padding: 1rem 1.2rem calc(1rem + env(safe-area-inset-bottom));
   display: flex;
   align-items: center;
-  z-index: 60;
+  z-index: 90;
 }
 
-.buy-icon{
+.pdp-like{
   width: 4.6rem;
   height: 4.6rem;
   border-radius: 1.2rem;
@@ -464,31 +444,38 @@
   margin-right: .8rem;
 }
 
-.buy-icon img{
+.pdp-like img{
   width: 2.2rem;
   height: 2.2rem;
 }
 
-.buy-btn{
+.pdp-gift{
   height: 4.6rem;
   border-radius: 1.2rem;
-  font-size: 1.5rem;
+  border: .1rem solid var(--gray-300);
+  background: var(--white);
+  color: var(--gray-900);
+  font-size: 1.4rem;
   font-weight: 900;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.buy-btn.ghost{
-  flex: 1;
-  border: .1rem solid var(--main);
-  color: var(--main);
-  background: var(--white);
+  padding: 0 1.2rem;
   margin-right: .8rem;
 }
 
-.buy-btn.primary{
+.pdp-gift img{
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: .6rem;
+}
+
+.pdp-buy{
   flex: 1;
+  height: 4.6rem;
+  border-radius: 1.2rem;
   background: var(--main);
   color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 900;
 }

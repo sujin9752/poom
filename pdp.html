@@ -8,354 +8,178 @@
       content="width=device-width, initial-scale=1.0, viewport-fit=cover"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
+
+
     <div class="main">
-      <div class="app main-wrap">
+      <div class="app pdp-wrap">
+
         <!-- header -->
-        <header class="main-header">
-          <div class="top-row">
-            <h1 class="logo">
+        <header class="pdp-header" aria-label="상품 상세 상단">
+          <div class="pdp-top-row">
+            <button type="button" class="pdp-icon-btn pdp-back" aria-label="뒤로가기">
+              <img src="" alt="">
+            </button>
+
+            <h1 class="pdp-logo">
               <a href="#none" aria-label="POOM home">
-                <img src="img/poom_logoE_red.png" alt="poom" />
+                <img src="" alt="">
               </a>
             </h1>
 
-            <div class="search">
-              <button type="button" class="search-btn" aria-label="검색">
-                <span class="search-placeholder">오늘은 어떤 게 끌리세요?</span>
+            <div class="pdp-top-icons">
+              <button type="button" class="pdp-icon-btn" aria-label="검색">
+                <img src="" alt="">
               </button>
-            </div>
-
-            <div class="top-icons">
-              <button type="button" class="icon-btn" aria-label="검색">
-                <img src="img/main/icon_search.png" alt="" />
-              </button>
-              <button type="button" class="icon-btn" aria-label="장바구니">
-                <img src="img/main/icon_cart.png" alt="" />
+              <button type="button" class="pdp-icon-btn" aria-label="장바구니">
+                <img src="" alt="">
               </button>
             </div>
           </div>
-
-          <nav class="tab-row" aria-label="메인 탭">
-            <button type="button" class="tab active">BEST</button>
-            <button type="button" class="tab">기획전</button>
-            <button type="button" class="tab">품 플러스(poom+)</button>
-            <button type="button" class="tab">이벤트</button>
-            <button type="button" class="tab">대량구매문의</button>
-          </nav>
         </header>
 
-        <main class="main-content">
-          <!-- hero -->
-          <section class="hero" aria-label="메인 배너">
-            <div class="hero-slider" data-autoplay="1" data-interval="3500">
-              <div class="hero-track">
-                <article class="hero-slide is-active">
-                  <a href="#none" class="hero-link">
-                    <img src="img/main/main_visual1.png" alt="메인 배너 1" />
-                  </a>
-                </article>
+        <main class="pdp-content">
 
-                <article class="hero-slide">
-                  <a href="#none" class="hero-link">
-                    <img src="img/main/main_visual2.png" alt="메인 배너 2" />
-                  </a>
-                </article>
+          <!-- hero image -->
+          <section class="pdp-hero" aria-label="상품 대표 이미지">
+            <div class="pdp-hero-img">
+              <img src="" alt="">
+            </div>
+          </section>
 
-                <article class="hero-slide">
-                  <a href="#none" class="hero-link">
-                    <img src="img/main/main_visual3.png" alt="메인 배너 3" />
-                  </a>
-                </article>
+          <!-- summary -->
+          <section class="pdp-summary" aria-label="상품 요약">
+            <div class="pdp-brand-row">
+              <button type="button" class="pdp-badge" aria-label="브랜드">
+                <img src="" alt="">
+              </button>
+              <a href="#none" class="pdp-brand">드림씨앤씨</a>
+              <span class="pdp-brand-arrow" aria-hidden="true">›</span>
+            </div>
 
-                <article class="hero-slide">
-                  <a href="#none" class="hero-link">
-                    <img src="img/main/main_visual4.png" alt="메인 배너 4" />
-                  </a>
-                </article>
+            <h2 class="pdp-title">[공식정품] 그로밋 맥그로우 펭귄 중형 인형 - 40cm</h2>
+
+            <div class="pdp-meta">
+              <span class="pdp-rate">
+                <span class="pdp-rate-star" aria-hidden="true">★</span>
+                <b>5.0</b>
+                <span class="pdp-meta-sub">|</span>
+                <a href="#reviews" class="pdp-meta-link">12 리뷰 보기</a>
+              </span>
+            </div>
+
+            <div class="pdp-price">
+              <div class="pdp-price-top">
+                <span class="pdp-sale">23%</span>
+                <span class="pdp-before">18,000원</span>
               </div>
 
-              <div class="hero-ui">
-                <button
-                  type="button"
-                  class="hero-play"
-                  aria-label="재생/일시정지"
-                >
-                  ⏸
+              <div class="pdp-price-main">
+                <strong class="pdp-final">13,900원</strong>
+                <span class="pdp-benefit-tag">
+                  <img src="" alt="">
+                  <em>품플러스 혜택가</em>
+                </span>
+                <button type="button" class="pdp-benefit-btn" aria-label="혜택받기">
+                  <img src="" alt="">
+                  <span>혜택받기</span>
                 </button>
-                <div class="hero-page" aria-label="배너 페이지">
-                  <span class="now">1</span>
-                  <span class="slash">/</span>
-                  <span class="total">4</span>
-                </div>
               </div>
-            </div>
-          </section>
 
-          <!-- quick -->
-          <section class="quick" aria-label="빠른 메뉴">
-            <ul class="quick-list">
-              <!-- li 9개 그대로 -->
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword1.png" alt="" /><span
-                    >바이품디자인</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword2.png" alt="" /><span
-                    >요즘 인기템</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword3.png" alt="" /><span
-                    >최저가도전</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword4.png" alt="" /><span
-                    >추천 컬렉션</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword5.png" alt="" /><span
-                    >선물 PICK</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword6.png" alt="" /><span
-                    >오늘의 취향</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword7.png" alt="" /><span
-                    >집꾸미기</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword8.png" alt="" /><span
-                    >패션템</span
-                  ></a
-                >
-              </li>
-              <li>
-                <a href="#none" class="quick-item"
-                  ><img src="img/main/keyword9.png" alt="" /><span
-                    >독서</span
-                  ></a
-                >
-              </li>
-            </ul>
-          </section>
-
-          <!-- section1: 기획전(배너 + 가로카드) -->
-          <section class="banner s1" aria-label="기획전">
-            <a href="#none" class="banner-link">
-              <img
-                src="img/main/section1.jpg"
-                alt="이긴다 반드시! 2025 가을운동회"
-              />
-            </a>
-
-            <div class="s1-row" aria-label="기획 상품 목록">
-              <ul class="s1-list">
-                <!-- li 반복 -->
-                <li class="s1-card">
-                  <a href="#none" class="s1-thumb"
-                    ><img src="img/main/s1_card_img01.jpg" alt=""
-                  /></a>
-                  <p class="s1-brand">도도한날</p>
-                  <p class="s1-name">금메달 왕메달 초콜릿 내맘대로 문구까지</p>
-                  <p class="s1-before">3,500원</p>
-                  <p class="s1-after">
-                    <span class="sale">10%</span> <em>3,150원</em>
-                  </p>
-                </li>
-
-                <li class="s1-card">
-                  <a href="#none" class="s1-thumb"
-                    ><img src="img/main/s1_card_img02.jpg" alt=""
-                  /></a>
-                  <p class="s1-brand">도도한날</p>
-                  <p class="s1-name">아나초콜렛 간식박스 용돈박스</p>
-                  <p class="s1-before">3,500원</p>
-                  <p class="s1-after">
-                    <span class="sale">10%</span> <em>3,150원</em>
-                  </p>
-                </li>
-
-                <!-- 나머지 동일 -->
-              </ul>
-            </div>
-          </section>
-
-          <div class="pro-banner">
-            <img src="img/main/banner1.png" alt="" />
-          </div>
-
-          <!-- MD Pick -->
-          <section class="md" aria-label="MD's Pick">
-            <div class="sec-head">
-              <div class="sec-text">
-                <h2 class="sec-title">MD's Pick</h2>
-                <p class="sec-desc">취향을 아는 MD의 감각적인 셀렉션</p>
-              </div>
-              <button type="button" class="sec-plus" aria-label="더보기">
-                <img src="img/main/icon_plus.png" alt="" />
+              <button type="button" class="pdp-store-btn" aria-label="구매 가능 매장 보기">
+                구매 가능 매장 보기
               </button>
             </div>
 
-            <div class="chip-row" role="tablist" aria-label="MD 필터">
-              <button type="button" class="chip">전체</button>
-              <button type="button" class="chip">디자인문구</button>
-              <button type="button" class="chip active">패션</button>
-              <button type="button" class="chip">홈데코</button>
-            </div>
-
-            <div class="grid">
-              <!-- card 반복 -->
-              <article class="card">
-                <a href="#none" class="thumb"
-                  ><img src="img/main/s2_card_img01.jpg" alt=""
-                /></a>
-                <button type="button" class="heart" aria-label="찜">♡</button>
-                <p class="name">올프레임 Airy Basic Pouch</p>
-                <p class="price"><span class="sale">30%</span> 13,300원</p>
-              </article>
-              <!-- ... -->
-            </div>
-          </section>
-
-          <!-- Time Deal -->
-          <section class="timedeal" aria-label="타임딜">
-            <div class="sec-head">
-              <div class="sec-text">
-                <h2 class="sec-title">Time Deal</h2>
-                <p class="sec-desc">
-                  최대 <b>39%</b> 할인
-                  <img
-                    class="time-deco"
-                    src="img/main/s3_deco_plus.png"
-                    alt=""
-                  />
-                  오늘 단 하루 특가
-                </p>
+            <div class="pdp-info-list" aria-label="추가 정보">
+              <div class="pdp-info-row">
+                <span class="pdp-info-k">적립안내</span>
+                <span class="pdp-info-v">포인트 139원 적립</span>
               </div>
-            </div>
-
-            <div class="deal-timer" aria-label="남은 시간">
-              <span class="time" id="dealTime">13:59:10</span>
-            </div>
-
-            <ul class="deal-list">
-              <li class="deal-item">
-                <a href="#none" class="deal-thumb"
-                  ><img src="img/main/s3_img01.jpg" alt=""
-                /></a>
-                <div class="deal-info">
-                  <p class="deal-name">곰돌이 파우치</p>
-                  <p class="deal-price">
-                    <span class="sale">20%</span> 19,900원
-                  </p>
-                </div>
-                <button type="button" class="heart" aria-label="찜">♡</button>
-              </li>
-              <!-- ... -->
-            </ul>
-
-            <div class="center">
-              <button type="button" class="btn-outline">전체보기</button>
-            </div>
-          </section>
-
-          <section class="banner">
-            <a href="#none" class="banner-link">
-              <img src="img/main/banner2.png" alt="끝없는 할인 혜택" />
-            </a>
-          </section>
-
-          <!-- HOT keyword -->
-          <section class="keyword" aria-label="HOT Keyword">
-            <div class="sec-head">
-              <div class="sec-text">
-                <h2 class="sec-title">HOT Keyword</h2>
+              <div class="pdp-info-row">
+                <span class="pdp-info-k">혜택안내</span>
+                <span class="pdp-info-v">NH카드 결제 시 최대 6개월 무이자</span>
               </div>
-            </div>
-
-            <div class="keyword-row">
-              <div class="keyword-grid">
-                <!-- 3열(또는 여러개) 그대로 -->
-                <!-- column -->
-                <div class="kw-col">
-                  <a href="#none" class="kw-card">
-                    <img src="img/main/s4_titlecard1.jpg" alt="" />
-                    <span class="tag">#웰레스와 그로밋</span>
-                  </a>
-
-                  <ul class="kw-list">
-                    <li class="kw-item">
-                      <a href="#none" class="kw-thumb"
-                        ><img src="img/main/s4_img1.jpg" alt=""
-                      /></a>
-                      <p class="kw-brand">드림씨앤씨</p>
-                      <p class="kw-name">
-                        [공식정품] 그로밋 맥그로우 펭귄 중형 인형 - 40cm
-                      </p>
-                      <p class="kw-price">
-                        <span class="sale">23%</span> 13,900원
-                      </p>
-                    </li>
-                    <!-- ... -->
-                  </ul>
-                </div>
-
-                <!-- 나머지 kw-col 반복 -->
+              <div class="pdp-info-row">
+                <span class="pdp-info-k">배송안내</span>
+                <span class="pdp-info-v">배송비 무료배송</span>
               </div>
             </div>
           </section>
 
-          <div class="spacer"></div>
+          <!-- tabs -->
+          <section class="pdp-tabs" aria-label="상품 상세 탭">
+            <div class="pdp-tab-row">
+              <button type="button" class="pdp-tab is-active" data-tab="info">기본정보</button>
+              <button type="button" class="pdp-tab" data-tab="reviews">상품후기(2)</button>
+              <button type="button" class="pdp-tab" data-tab="qa">Q&amp;A</button>
+            </div>
+          </section>
+
+          <!-- detail (image above 펼쳐보기) -->
+          <section class="pdp-detail" id="info" aria-label="상품 상세">
+            <!-- ✅ 펼쳐보기 바로 위 '상세이미지' : img 태그만 / src 비움 -->
+            <div class="pdp-detail-hero">
+              <img src="" alt="">
+            </div>
+
+            <!-- fold area -->
+            <div class="pdp-fold" data-collapsed="1" aria-label="상세 이미지 펼쳐보기">
+              <div class="pdp-fold-inner">
+                <!-- 여기에 상세 이미지들을 통으로 넣을 예정이면 img 여러개든, 1개든 그대로 꽂으면 됨 -->
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+              </div>
+
+              <div class="pdp-fold-dim" aria-hidden="true"></div>
+
+              <button type="button" class="pdp-fold-btn" aria-expanded="false">
+                <span class="pdp-fold-text">펼쳐보기</span>
+                <span class="pdp-fold-arrow" aria-hidden="true">⌄</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- reviews / qa anchors (구간용) -->
+          <section class="pdp-section" id="reviews" aria-label="상품 후기">
+            <h3 class="pdp-section-title">상품후기</h3>
+            <div class="pdp-section-box">
+              <p class="pdp-empty">후기 영역</p>
+            </div>
+          </section>
+
+          <section class="pdp-section" id="qa" aria-label="Q&amp;A">
+            <h3 class="pdp-section-title">Q&amp;A</h3>
+            <div class="pdp-section-box">
+              <p class="pdp-empty">Q&amp;A 영역</p>
+            </div>
+          </section>
+
+          <div class="pdp-spacer"></div>
         </main>
 
-        <!-- bottom nav -->
-        <nav class="bottom-nav" aria-label="하단 탭">
-          <a href="#none" class="bn-item active" data-tab="home">
-            <img src="img/main/footer_home_fill.png" alt="" />
-            <span>홈</span>
-          </a>
-          <a href="#none" class="bn-item" data-tab="menu">
-            <img src="img/main/footer_category.png" alt="" />
-            <span>카테고리</span>
-          </a>
-          <a href="#none" class="bn-item" data-tab="mypage">
-            <img src="img/main/footer_person.png" alt="" />
-            <span>마이페이지</span>
-          </a>
-          <a href="#none" class="bn-item" data-tab="time">
-            <img src="img/main/footer_time.png" alt="" />
-            <span>최근본상품</span>
-          </a>
+        <!-- bottom action -->
+        <nav class="pdp-bottom" aria-label="구매 하단 영역">
+          <button type="button" class="pdp-like" aria-label="찜">
+            <img src="" alt="">
+          </button>
+
+          <button type="button" class="pdp-gift" aria-label="선물하기">
+            <img src="" alt="">
+            <span>선물하기</span>
+          </button>
+
+          <button type="button" class="pdp-buy" aria-label="구매하기">
+            구매하기
+          </button>
         </nav>
+
       </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/pdp.js"></script>
   </body>
 </html>
