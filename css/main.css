@@ -1,9 +1,34 @@
 /* main.css */
 
+/* =========================
+  layout
+========================= */
 .main-wrap{
   min-height: 100vh;
   padding-bottom: 8.6rem; /* 하단 탭 공간 */
 }
+
+.main-content{
+  padding: 1.2rem 0 7.6rem; /* 위 1.2rem + 하단 탭 여유 */
+}
+
+/* 섹션 간격 통일 (기본 3.2rem) */
+.quick,
+.banner,
+.pro-banner,
+.sec-head,
+.md-head,
+.deal,
+.kw{
+  padding-top: 3.2rem;
+}
+
+/* 섹션별 좌우 패딩이 따로 필요한 애들은 여기서 유지 */
+.banner{ padding-right: 1.6rem; padding-left: 1.6rem; }
+.pro-banner{ padding-right: 1.6rem; padding-left: 1.6rem; }
+.sec-head{ padding-right: 1.6rem; padding-left: 1.6rem; }
+.md-head{ padding-right: 1.6rem; padding-left: 1.6rem; }
+.kw-head{ padding: 0 1.6rem; } /* kw 타이틀 줄 */
 
 /* =========================
   header
@@ -20,12 +45,11 @@
 .top-row{
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 }
 
 .logo{
   width: 5rem;
-  margin: 0 .8rem 0 0;   /
+  margin: 0 .8rem 0 0;
 }
 
 .logo img{
@@ -57,6 +81,7 @@
   font-size: 1.3rem;
   color: var(--gray-800);
 }
+
 .top-icons{
   display: flex;
   align-items: center;
@@ -101,13 +126,6 @@
   color: var(--gray-900);
   border-color: var(--gray-300);
   background: var(--gray-100);
-}
-
-/* =========================
-  content
-========================= */
-.main-content{
-  padding: 1.2rem 0 0;
 }
 
 /* =========================
@@ -187,7 +205,8 @@
   quick (가로 스크롤)
 ========================= */
 .quick{
-  padding: 1.2rem 0 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .quick-list{
@@ -214,7 +233,7 @@
 
 .quick-item img{
   width: 7rem;
-  height: 7rem;  
+  height: 7rem;
 }
 
 .quick-item span{
@@ -227,9 +246,8 @@
   banners (공통)
 ========================= */
 .banner{
-  padding: 1.6rem 1.6rem 0;
+  padding-bottom: 0;
 }
-
 
 /* =========================
   section1: 기획전 가로카드
@@ -237,10 +255,9 @@
 .s1 .s1-row{
   position: relative;
   width: 100%;
-
   background: url(../img/main/section1.jpg) no-repeat center top;
-  background-size: contain; 
-  padding: 12.8rem 0 3.2rem; 
+  background-size: contain;
+  padding: 12.8rem 0 3.2rem;
 }
 
 .s1-list{
@@ -249,14 +266,12 @@
   overflow-x: auto;
   overflow-y: visible;
   white-space: normal;
-
   padding: 0 1.2rem;
   -webkit-overflow-scrolling: touch;
 }
 
 .s1-list::-webkit-scrollbar{ display:none; }
 
-/* 카드 */
 .s1-card{
   flex: 0 0 auto;
   width: 12rem;
@@ -270,7 +285,7 @@
 
 .s1-thumb{
   display: block;
-  border-radius: 1rem 1rem 0 0 ;
+  border-radius: 1rem 1rem 0 0;
   overflow: hidden;
   background: #fff;
 }
@@ -281,13 +296,11 @@
   object-fit: cover;
 }
 
-/* 텍스트 영역 */
-.s1-txt {
+.s1-txt{
   padding: 1rem;
 }
 
 .s1-brand{
-
   margin-top: .9rem;
   font-size: 1.4rem;
   color: var(--gray-700);
@@ -298,7 +311,6 @@
   margin-top: .3rem;
   font-size: 1.3rem;
   font-weight: 700;
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -329,10 +341,6 @@
 /* =========================
   pro banner
 ========================= */
-.pro-banner{
-  padding: 1.6rem 1.6rem 0;
-}
-
 .pro-banner img{
   width: 100%;
   height: auto;
@@ -344,15 +352,12 @@
   section head
 ========================= */
 .sec-head{
-  padding: 2rem 1.6rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.sec-text{
-  flex: 1;
-}
+.sec-text{ flex: 1; }
 
 .sec-title{
   font-size: 1.8rem;
@@ -415,7 +420,6 @@
   MD's Pick
 ========================= */
 .md-head{
-  padding: 2rem 1.6rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -435,7 +439,6 @@
   color: var(--gray-700);
 }
 
-/* 우측 + 버튼 */
 .md-more{
   width: 3.6rem;
   height: 3.6rem;
@@ -451,10 +454,7 @@
   height: 2.2rem;
 }
 
-/* =========================
-  MD 칩(카테고리)
-  - 캡쳐처럼: 흰 배경 + 빨간 테두리 + 라운드
-========================= */
+/* MD 칩 */
 .md-chip-row{
   padding: 1.2rem 1.6rem 0;
   overflow-x: auto;
@@ -470,28 +470,22 @@
   height: 3.6rem;
   padding: 0 1.8rem;
   border-radius: 999px;
-
   border: .2rem solid var(--main);
   background: var(--white);
   color: var(--gray-900);
-
   font-size: 1.4rem;
   font-weight: 800;
-
   margin-right: 1.2rem;
 }
 
 .md-chip:last-child{ margin-right: 0; }
 
-/* 선택 상태(캡쳐는 거의 동일해 보여서 “텍스트만 강조”로) */
 .md-chip.is-active{
   color: var(--main);
   font-weight: 900;
 }
 
-/* =========================
-  MD 상품 그리드
-========================= */
+/* MD 그리드 */
 .md-grid{
   padding: 1.2rem 1.6rem 0;
   display: flex;
@@ -517,27 +511,21 @@
   object-fit: cover;
 }
 
-/* 하트(캡쳐처럼 이미지 위 오른쪽) */
 .md-heart{
   position: absolute;
   right: .8rem;
-  top: 11.8rem;           /* 썸네일 하단쯤 걸치게 */
+  top: 11.8rem;
   width: 3.6rem;
   height: 3.6rem;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   font-size: 2.4rem;
   line-height: 1;
   color: var(--main);
 }
 
-/* 꽉 찬 하트 느낌(첫 번째 카드처럼) */
-.md-heart.is-on{
-  font-size: 2.6rem;
-}
+.md-heart.is-on{ font-size: 2.6rem; }
 
 .md-brand{
   margin-top: .9rem;
@@ -550,7 +538,6 @@
   margin-top: .3rem;
   font-size: 1.2rem;
   color: var(--gray-700);
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -569,13 +556,8 @@
 }
 
 /* =========================
-  Time Deal (캡쳐 스타일)
+  Time Deal
 ========================= */
-.deal{
-  padding: 2rem 0 0;
-}
-
-/* 상단 이미지(반원 그래픽) */
 .deal-hero{
   padding: 0 1.6rem;
 }
@@ -586,7 +568,6 @@
   display: block;
 }
 
-/* 타이머 (빨간 숫자만) */
 .deal-timer{
   padding: .8rem 0 0;
   display: flex;
@@ -600,7 +581,6 @@
   letter-spacing: .06em;
 }
 
-/* 리스트 */
 .deal-list{
   padding: 1.6rem 1.6rem 0;
 }
@@ -612,7 +592,6 @@
   border-bottom: .1rem solid var(--gray-200);
 }
 
-/* 원형 썸네일 */
 .deal-thumb{
   width: 12.6rem;
   height: 12.6rem;
@@ -630,10 +609,9 @@
   object-fit: cover;
 }
 
-/* 오른쪽 텍스트 */
 .deal-info{
   flex: 1;
-  min-width: 0; /* 말줄임 안정 */
+  min-width: 0;
 }
 
 .deal-sale{
@@ -654,23 +632,17 @@
   font-size: 1.4rem;
   color: var(--gray-700);
   line-height: 1.2;
-
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* 가격 (현재가 + 취소선) */
 .deal-price{
   margin-top: 1rem;
   display: flex;
   align-items: baseline;
-  gap: .8rem; /* gap 호환성 주의! */
+  gap: .8rem; /* 구형 브라우저 걱정되면 margin-right로 대체 */
 }
-
-/* ✅ gap 호환성 걱정되면 아래로 대체
-.deal-now{ margin-right: .8rem; }
-*/
 
 .deal-now{
   font-size: 1.7rem;
@@ -684,7 +656,6 @@
   text-decoration: line-through;
 }
 
-/* 하트(오른쪽) */
 .deal-heart{
   width: 3.6rem;
   height: 3.6rem;
@@ -697,19 +668,8 @@
 }
 
 /* =========================
-  HOT Keyword (캡쳐 스타일)
+  HOT Keyword
 ========================= */
-.kw-head{
-  padding: 2rem 1.6rem 0;
-}
-
-.kw-title{
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: var(--gray-900);
-}
-
-/* 가로 스크롤 */
 .kw-row{
   padding: 1.2rem 0 0;
 }
@@ -719,92 +679,63 @@
   white-space: nowrap;
   padding: 0 1.6rem;
 }
-
 .kw-track::-webkit-scrollbar{ display:none; }
 
-/* 컬럼(배경색 + 둥근 박스) */
 .kw-col{
   display: inline-block;
   width: 25rem;
   vertical-align: top;
   margin-right: 1.2rem;
-
   border-radius: 1.6rem;
-  padding: 1.2rem;
+  overflow: hidden;
+  padding: 0;
 }
-
 .kw-col:last-child{ margin-right: 0; }
 
-/* 배경색(캡쳐 느낌) */
 .kw-col--blue{ background: #cfeef7; }
 .kw-col--yellow{ background: #fff0b3; }
 .kw-col--green{ background: #dff1c3; }
 
-/* 상단 타이틀 이미지 */
 .kw-top{
   position: relative;
   display: block;
-  border-radius: 1.2rem;
+  border-radius: 0;
   overflow: hidden;
-  margin-bottom: 1.2rem;
+  margin: 0;
 }
 
 .kw-top-img{
   width: 100%;
-  height: 8.6rem;
+  height: 9.6rem;
   object-fit: cover;
   display: block;
 }
 
-/* 좌상단 태그 */
-.kw-tag{
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  padding: .4rem .8rem;
-  border-radius: 999px;
-  background: rgba(0,0,0,.35);
-  color: var(--white);
-  font-size: 1.2rem;
-  font-weight: 900;
-}
+.kw-tag,
+.kw-rate{ display: none; }
 
-/* 우상단 ~23% 같은 텍스트 */
-.kw-rate{
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: var(--white);
-  text-shadow: 0 .1rem .2rem rgba(0,0,0,.25);
+.kw-list{
+  padding: 1.2rem;
 }
-
-/* 리스트 */
-.kw-list{ }
 
 .kw-item{
-  background: var(--white);
-  border-radius: 1.2rem;
-  padding: .9rem;
-  margin-bottom: 1rem;
-
+  background: transparent;
+  border-radius: 0;
+  padding: 1rem 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0,0,0,.08);
 }
+.kw-item:last-child{ border-bottom: 0; }
 
-.kw-item:last-child{ margin-bottom: 0; }
-
-/* 왼쪽 썸네일(작게) */
 .kw-thumb{
-  width: 6.4rem;
-  height: 6.4rem;
-  border-radius: 1rem;
+  width: 6.6rem;
+  height: 6.6rem;
+  border-radius: 1.2rem;
   overflow: hidden;
   flex: 0 0 auto;
   margin-right: 1rem;
 }
-
 .kw-thumb img{
   width: 100%;
   height: 100%;
@@ -812,10 +743,10 @@
   display: block;
 }
 
-/* 가운데 텍스트 */
 .kw-txt{
   flex: 1;
-  min-width: 0; /* 말줄임 안정 */
+  min-width: 0;
+  padding-right: .4rem;
 }
 
 .kw-brand{
@@ -827,15 +758,15 @@
 .kw-name{
   margin-top: .3rem;
   font-size: 1.2rem;
-  color: var(--gray-700);
-
-  white-space: nowrap;
+  color: var(--gray-800);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .kw-price{
-  margin-top: .5rem;
+  margin-top: .6rem;
   font-size: 1.2rem;
   font-weight: 900;
   color: var(--main);
@@ -849,31 +780,23 @@
 .kw-before{
   margin-left: .6rem;
   font-size: 1.1rem;
-  color: var(--gray-500);
+  color: var(--gray-600);
   text-decoration: line-through;
 }
 
-/* 오른쪽 하트 */
 .kw-heart{
   width: 3.2rem;
   height: 3.2rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   font-size: 2.2rem;
+  line-height: 1;
   color: var(--main);
   margin-left: .6rem;
+  margin-top: .2rem;
 }
-
-.kw-heart.is-on{
-  font-size: 2.3rem;
-}
-
-
-.spacer{
-  height: 1.6rem;
-}
+.kw-heart.is-on{ font-size: 2.3rem; }
 
 /* =========================
   bottom nav
@@ -891,6 +814,7 @@
   display: flex;
   height: 6.6rem;
   z-index: 60;
+  box-shadow: 0 -0.8rem 1.6rem rgba(0,0,0,.12);
 }
 
 .bn-item{
@@ -912,4 +836,71 @@
 .bn-item.active{
   color: var(--main);
   font-weight: 900;
+}
+
+/* =========================
+  footer
+========================= */
+.footer{
+  background: #e5e5e5;
+  padding: 3.2rem 0 3.2rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.footer-inner{
+  position: relative;
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.footer-nav ul{
+  display: flex;
+  gap: 1.2rem;
+  row-gap: .8rem;
+  flex-wrap: wrap;
+}
+
+.footer-nav a{
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.footer-info{
+  margin-top: 1.2rem;
+}
+
+.footer-company{
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.footer-copy{
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.footer-sns{
+  display: flex;
+  gap: .8rem;
+  margin-top: 1.2rem;
+}
+
+.footer-sns img{
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.footer-top{
+  position: absolute;
+  right: 1.6rem;
+  bottom: .6rem;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.footer-top img{
+  width: 100%;
+  height: 100%;
 }

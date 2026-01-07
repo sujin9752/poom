@@ -1,6 +1,19 @@
 // pdp.js
 document.addEventListener('DOMContentLoaded', () => {
-  // 펼쳐보기 토글
+
+  /* =========================
+    뒤로가기 → 메인 홈 이동
+  ========================= */
+  const backBtn = document.querySelector('.pdp-back');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => {
+      window.location.href = 'main.html';
+    });
+  }
+
+  /* =========================
+    상세 펼쳐보기 토글
+  ========================= */
   const fold = document.querySelector('.pdp-fold');
   const btn = document.querySelector('.pdp-fold-btn');
   const text = document.querySelector('.pdp-fold-text');
@@ -28,7 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 탭 클릭 → 해당 섹션으로 스크롤
+  /* =========================
+    탭 클릭 → 섹션 스크롤
+  ========================= */
   const tabs = document.querySelectorAll('.pdp-tab');
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -39,10 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.getElementById(id);
       if (!target) return;
 
-      // sticky header+tabs 고려 오프셋
-      const offset = 5.2 * 10 + 4.6 * 10 + 16; // rem(10px 기준) + 여유
+      // sticky header(5.2rem) + tab(4.6rem) + 여유
+      const offset = (5.2 + 4.6) * 10 + 16; // rem 기준
       const y = target.getBoundingClientRect().top + window.scrollY - offset;
+
       window.scrollTo({ top: y, behavior: 'smooth' });
     });
   });
+
 });

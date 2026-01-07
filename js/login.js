@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const btnLogin = document.querySelector('.btn.btn-primary');
   const btnSkip = document.querySelector('.login-header .skip');
 
-  // 페이드 인 (CSS에 fade-in/out 있어야 함)
+  // 페이드 인
   requestAnimationFrame(() => {
     page.classList.add('fade-in');
     page.classList.remove('fade-out');
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 800);
   }
 
-  // 가입하기 -> category.html
+  // 가입하기 → category.html
   if (btnSignup) {
     btnSignup.addEventListener('click', () => go('./category.html'));
     btnSignup.addEventListener('keydown', (e) => {
@@ -33,13 +33,13 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 로그인 -> main.html (원하면 login_form.html 같은 걸로 바꿔도 됨)
+  // 로그인 → main.html
   if (btnLogin) {
     btnLogin.addEventListener('click', () => go('./main.html'));
   }
 
-  // 둘러보기 -> main.html
+  // 둘러보기 → category.html ✅ 여기만 바뀜
   if (btnSkip) {
-    btnSkip.addEventListener('click', () => go('./main.html'));
+    btnSkip.addEventListener('click', () => go('./category.html'));
   }
 });
