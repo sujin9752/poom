@@ -1,0 +1,134 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #222;
+  margin: 0;
+}
+
+.mockup .mobile-mockup {
+  border: 1px solid #666;
+  background-color: #222;
+  width: 410px;
+  height: 864px;
+  position: relative;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+.mockup .mobile-mockup .camera {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #222;
+  width: 120px;
+  height: 30px;
+  border-radius: 30px;
+  z-index: 2;
+}
+.mockup .mobile-mockup .camera span {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.mockup .mobile-mockup .camera span:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 50%,
+      #111 0%,
+      #333 75%,
+      #222 100%);
+}
+.mockup .mobile-mockup .camera span:nth-child(2) {
+  width: 12px;
+  height: 12px;
+  background:
+    radial-gradient(circle at 40% 40%,
+      #2e92c5 0%,
+      #1a5cff 35%,
+      #0b1a3a 55%,
+      transparent 36%
+    ),
+    /* 유리 반사 */
+    radial-gradient(circle at 30% 30%,
+      rgba(255,255,255,.35),
+      transparent 45%
+    ),
+    /* 렌즈 베이스 */
+    radial-gradient(circle,
+      #2a2a2a 0%,
+      #111 70%
+    );
+  box-shadow:
+    inset 0 0 3px rgba(255,255,255,.25),
+    inset 0 0 6px rgba(0,0,0,.9),
+    0 0 1px rgba(0,0,0,.8);
+}
+
+.mockup .mobile-mockup .volume {
+  position: absolute;
+  top: 100px;
+  right: 100%;
+  width: 7px;
+  height: 180px;
+}
+.mockup .mobile-mockup .volume span {
+  position: absolute;
+  width: 7px;
+  height: 50px;
+  border-radius: 0 5px 5px 0;
+  transform: rotateY(180deg);
+}
+.mockup .mobile-mockup .volume span:nth-child(1) {
+  top: 0;
+  height: 30px;
+}
+.mockup .mobile-mockup .volume span:nth-child(2) {
+  bottom: 60px;
+}
+.mockup .mobile-mockup .volume span:nth-child(3) {
+  bottom: 0;
+}
+.mockup .mobile-mockup .power {
+  position: absolute;
+  right: 0;
+  top: 180px;
+}
+.mockup .mobile-mockup .power span {
+  position: absolute;
+  width: 7px;
+  height: 80px;
+  border-radius: 0 5px 5px 0;
+}
+.mockup .mobile-mockup .iframe-url {
+  position: absolute;
+  width: 390px;
+  height: 844px;
+  background-color: #333;
+  border: 1px solid #eee;
+  border-radius: 40px;
+  overflow: hidden;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.mockup .mobile-mockup .iframe-url iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+.mockup .mobile-mockup .volume span,
+.mockup .mobile-mockup .power span {
+  background-color: #222;
+}
