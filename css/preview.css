@@ -4,10 +4,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #222;
   margin: 0;
 }
 
+h2 {
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  font-size: 18px;
+  color: #555;
+  margin-top: 30px;
+}
 .mockup .mobile-mockup {
   border: 1px solid #666;
   background-color: #222;
@@ -16,6 +22,24 @@ body {
   position: relative;
   border-radius: 50px;
   z-index: 1;
+}
+
+.mockup .mobile-mockup .statusbar {
+  position: absolute;
+  width: 360px;
+  top: 5px;
+  left: 52%;
+  transform: translateX(-50%);
+  /* gap: 100px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.mockup .mobile-mockup .statusbar img {
+  width: 70%;
+  height: auto;
 }
 
 .mockup .mobile-mockup .camera {
